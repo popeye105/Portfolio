@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "serve -s .",
-    "build": "echo 'Static site ready for deployment'",
+    "build": "echo 'Static site ready'",
     "dev": "serve -s ."
   },
   "dependencies": {},

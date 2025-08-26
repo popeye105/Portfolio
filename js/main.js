@@ -73,7 +73,6 @@ document.querySelector('.resume-btn').addEventListener('click', () => {
     window.open('path/to/your/resume.pdf', '_blank');
 });
 
-<<<<<<< HEAD
 // Video background debugging
 function initializeVideo() {
     const video = document.getElementById('bg-video');
@@ -91,10 +90,6 @@ function initializeVideo() {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initializeVideo();
-=======
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
->>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     populateSkills();
     populateExperience();
     populateSocialLinks();

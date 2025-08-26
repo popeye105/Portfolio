@@ -34,11 +34,21 @@ body {
 }
 
 .video-background video {
+<<<<<<< HEAD
+=======
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     object-fit: cover;
     will-change: transform;
     transform: translateZ(0);
@@ -46,11 +56,20 @@ body {
 
 /* Removed full overlay - video background will be visible */
 
+=======
+    background: rgba(0, 0, 0, 0.7);
+}
+
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
 /* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+<<<<<<< HEAD
+=======
+    background: var(--bg-dark-transparent);
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     min-height: 100vh;
 }
 
@@ -63,8 +82,14 @@ nav {
     gap: 30px;
     position: sticky;
     top: 0;
+<<<<<<< HEAD
     z-index: 1000;
     margin: 20px 0;
+=======
+    background: var(--bg-dark-transparent);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
 }
 
 nav a {
@@ -89,14 +114,21 @@ nav a:hover {
 }
 
 .resume-btn:hover {
+<<<<<<< HEAD
     background: transparent;
     box-shadow: 0 0 10px var(--accent-color);
+=======
+    background: rgba(100, 255, 218, 0.1);
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
 }
 
 /* Sections */
 .section {
     padding: var(--section-padding);
+<<<<<<< HEAD
     margin: 20px 0;
+=======
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
 }
 
 h2 {
@@ -141,6 +173,10 @@ h2 {
 
 .skill-item {
     padding: 20px;
+<<<<<<< HEAD
+=======
+    background: rgba(255, 255, 255, 0.05);
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
@@ -157,6 +193,10 @@ h2 {
 
 /* Education Section */
 .education-card {
+<<<<<<< HEAD
+=======
+    background: rgba(255, 255, 255, 0.05);
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -169,6 +209,10 @@ h2 {
 }
 
 .experience-card {
+<<<<<<< HEAD
+=======
+    background: rgba(255, 255, 255, 0.05);
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     padding: 30px;
     border-radius: 8px;
     position: relative;
@@ -197,6 +241,7 @@ footer {
     text-align: center;
     padding: 40px 0;
     color: var(--text-secondary);
+<<<<<<< HEAD
     margin: 20px 0;
 }
 
@@ -219,10 +264,13 @@ footer {
     .video-background {
         background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     }
+=======
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+<<<<<<< HEAD
     .container {
         padding: 0 15px;
     }
@@ -252,10 +300,16 @@ footer {
         font-size: 1.5rem;
         margin-bottom: 20px;
         text-align: center;
+=======
+    nav {
+        flex-direction: column;
+        padding: 20px;
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
     }
 
     .about-content {
         grid-template-columns: 1fr;
+<<<<<<< HEAD
         gap: 20px;
         text-align: center;
     }
@@ -327,4 +381,12 @@ footer {
     .profile-image {
         max-width: 150px;
     }
+=======
+    }
+
+    .profile-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+>>>>>>> c6c3a45568e9ecbcb0b033533ab6f61961337278
 }

@@ -82,34 +82,6 @@ document.querySelector('.resume-btn').addEventListener('click', () => {
 // Loading screen management
 function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
-    const loadingVideo = document.getElementById('loading-video');
-    
-    if (loadingVideo) {
-        // Force all video properties immediately
-        loadingVideo.muted = true;
-        loadingVideo.autoplay = true;
-        loadingVideo.playsInline = true;
-        loadingVideo.defaultMuted = true;
-        
-        // Multiple aggressive play attempts
-        const forcePlay = () => {
-            loadingVideo.currentTime = 0;
-            loadingVideo.play().catch(() => {
-                // Retry every 50ms for first 2 seconds
-                setTimeout(forcePlay, 50);
-            });
-        };
-        
-        // Start immediately
-        forcePlay();
-        
-        // Also try when metadata loads
-        loadingVideo.addEventListener('loadedmetadata', forcePlay);
-        loadingVideo.addEventListener('canplay', forcePlay);
-        
-        // Force load
-        loadingVideo.load();
-    }
     
     // Hide loading screen after 2 seconds
     setTimeout(() => {
@@ -119,7 +91,6 @@ function initializeLoading() {
             
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
-                initializeBackgroundVideo();
             }, 500);
         }
     }, 2000);
@@ -165,31 +136,18 @@ function initializeVideo() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Start videos immediately on DOM load
-    const loadingVideo = document.getElementById('loading-video');
+    // Start background video immediately
     const bgVideo = document.getElementById('bg-video');
-    
-    // Force loading video to start immediately
-    if (loadingVideo) {
-        loadingVideo.muted = true;
-        loadingVideo.autoplay = true;
-        loadingVideo.playsInline = true;
-        loadingVideo.defaultMuted = true;
-        loadingVideo.play();
-    }
-    
-    // Force background video to start immediately
     if (bgVideo) {
         bgVideo.muted = true;
         bgVideo.autoplay = true;
         bgVideo.loop = true;
         bgVideo.playsInline = true;
         bgVideo.defaultMuted = true;
-        bgVideo.play();
+        bgVideo.play().catch(() => {}); // Ignore errors
     }
     
     initializeLoading();
-    initializeVideo();
     populateSkills();
     populateEducation();
     populateExperience();

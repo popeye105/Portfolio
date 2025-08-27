@@ -76,6 +76,14 @@ document.querySelector('.resume-btn').addEventListener('click', () => {
 // Loading screen management
 function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
+    const loadingVideo = document.getElementById('loading-video');
+    
+    // Force loading video to play
+    if (loadingVideo) {
+        loadingVideo.play().catch(() => {
+            console.log('Loading video autoplay failed');
+        });
+    }
     
     // Hide loading screen after 2 seconds
     setTimeout(() => {

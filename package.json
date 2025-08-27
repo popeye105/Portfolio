@@ -8,10 +8,6 @@
     "build": "echo 'Static site ready'",
     "dev": "serve -s ."
   },
-  "dependencies": {},
-  "devDependencies": {
-    "serve": "^14.2.1"
-  },
   "keywords": ["portfolio", "website", "personal"],
   "author": "ariz17",
   "license": "MIT"

@@ -10,7 +10,7 @@
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #000;">
-        <video id="loading-video" autoplay muted playsinline preload="metadata" style="width: 100vw; height: 100vh; object-fit: cover;">
+        <video id="loading-video" autoplay muted playsinline webkit-playsinline preload="auto" style="width: 100vw; height: 100vh; object-fit: cover;">
             <source src="Loading.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Video Background -->
-    <video id="bg-video" autoplay muted playsinline loop preload="metadata" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -10;">
+    <video id="bg-video" autoplay muted playsinline webkit-playsinline loop preload="metadata" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -10;">
         <source src="Portfolio Background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>

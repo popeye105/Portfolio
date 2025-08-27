@@ -54,6 +54,12 @@ function populateExperience() {
     });
 }
 
+// Populate education section (stub to avoid runtime errors)
+function populateEducation() {
+    // The template in index.html already contains a sample education card.
+    // Extend this function later if dynamic content is desired.
+}
+
 // Populate social links
 function populateSocialLinks() {
     const socialLinksContainer = document.querySelector('.social-links');

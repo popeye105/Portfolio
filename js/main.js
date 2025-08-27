@@ -73,36 +73,45 @@ document.querySelector('.resume-btn').addEventListener('click', () => {
     window.open('path/to/your/resume.pdf', '_blank');
 });
 
-// Video sequence management
+// Loading screen management
+function initializeLoading() {
+    const loadingScreen = document.getElementById('loading-screen');
+    
+    // Hide loading screen after 2 seconds
+    setTimeout(() => {
+        if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease-out';
+            
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+    }, 2000);
+}
+
+// Simple video background
 function initializeVideo() {
     const video = document.getElementById('bg-video');
-    const source = document.getElementById('intro-source');
     
-    if (video && source) {
-        // Event listener for when intro video ends
-        video.addEventListener('ended', () => {
-            // Switch to loop video
-            source.src = 'Portfolio Loop Vid.mp4';
-            video.loop = true;
-            video.load();
-            video.play().catch(e => console.log('Loop video play failed'));
-        });
-        
-        // Start playing intro video with error handling
-        video.play().catch(e => {
-            console.log('Autoplay failed, user interaction required');
-            // Fallback: try to play on user interaction
-            document.addEventListener('click', () => {
-                video.play();
-            }, { once: true });
-        });
+    if (video) {
+        // Force play if autoplay fails
+        setTimeout(() => {
+            if (video.paused) {
+                video.play().catch(() => {
+                    document.addEventListener('click', () => video.play(), { once: true });
+                });
+            }
+        }, 100);
     }
 }
 
-// Initialize
+// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    initializeLoading();
     initializeVideo();
     populateSkills();
+    populateEducation();
     populateExperience();
     populateSocialLinks();
 });

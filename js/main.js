@@ -78,43 +78,28 @@ function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
     const loadingVideo = document.getElementById('loading-video');
     
-    // Debug video loading
     if (loadingVideo) {
-        console.log('Loading video element found');
-        
-        loadingVideo.addEventListener('loadstart', () => console.log('Loading video: loadstart'));
-        loadingVideo.addEventListener('loadeddata', () => console.log('Loading video: loadeddata'));
-        loadingVideo.addEventListener('canplay', () => console.log('Loading video: canplay'));
-        loadingVideo.addEventListener('error', (e) => console.error('Loading video error:', e));
-        
         // Force video properties
         loadingVideo.muted = true;
-        loadingVideo.autoplay = true;
         loadingVideo.playsInline = true;
         
-        loadingVideo.load();
-        
-        // Try to play immediately
-        loadingVideo.play().then(() => {
-            console.log('Loading video playing successfully');
-        }).catch((error) => {
-            console.error('Loading video play failed:', error);
-            
-            // Try again after a short delay
-            setTimeout(() => {
-                loadingVideo.play().catch(e => console.error('Loading video retry failed:', e));
-            }, 500);
-        });
-        
-        // User interaction fallback
-        const playOnClick = () => {
+        // Immediate play attempt
+        const attemptPlay = () => {
             loadingVideo.play().then(() => {
-                console.log('Loading video started on user interaction');
-            }).catch(e => console.error('Loading video click play failed:', e));
+                console.log('Loading video started');
+                // Update text when video starts
+                const loadingText = document.querySelector('#loading-screen div');
+                if (loadingText) loadingText.textContent = 'LOADING...';
+            }).catch((error) => {
+                console.log('Loading video needs user interaction');
+            });
         };
         
-        document.addEventListener('click', playOnClick, { once: true });
-        document.addEventListener('touchstart', playOnClick, { once: true });
+        // Try to play when video can play
+        loadingVideo.addEventListener('canplay', attemptPlay, { once: true });
+        
+        // Also try immediately
+        setTimeout(attemptPlay, 100);
     }
     
     // Hide loading screen after 2 seconds
@@ -136,42 +121,35 @@ function initializeBackgroundVideo() {
     const video = document.getElementById('bg-video');
     
     if (video) {
-        console.log('Background video element found');
-        
-        video.addEventListener('loadstart', () => console.log('Background video: loadstart'));
-        video.addEventListener('loadeddata', () => console.log('Background video: loadeddata'));
-        video.addEventListener('canplay', () => console.log('Background video: canplay'));
-        video.addEventListener('error', (e) => console.error('Background video error:', e));
-        
         // Force video properties
         video.muted = true;
-        video.autoplay = true;
         video.loop = true;
         video.playsInline = true;
         
-        video.load();
-        
-        // Try to play immediately
-        video.play().then(() => {
-            console.log('Background video playing successfully');
-        }).catch((error) => {
-            console.error('Background video play failed:', error);
-            
-            // Try again after a short delay
-            setTimeout(() => {
-                video.play().catch(e => console.error('Background video retry failed:', e));
-            }, 500);
-        });
-        
-        // User interaction fallback
-        const playOnClick = () => {
+        // Immediate play attempt
+        const attemptPlay = () => {
             video.play().then(() => {
-                console.log('Background video started on user interaction');
-            }).catch(e => console.error('Background video click play failed:', e));
+                console.log('Background video started');
+            }).catch((error) => {
+                console.log('Background video needs user interaction');
+                
+                // Add click anywhere to start background video
+                const startBgVideo = () => {
+                    video.play().then(() => {
+                        console.log('Background video started on click');
+                    }).catch(e => console.log('Background video click failed'));
+                };
+                
+                document.addEventListener('click', startBgVideo, { once: true });
+                document.addEventListener('touchstart', startBgVideo, { once: true });
+            });
         };
         
-        document.addEventListener('click', playOnClick, { once: true });
-        document.addEventListener('touchstart', playOnClick, { once: true });
+        // Try to play when video can play
+        video.addEventListener('canplay', attemptPlay, { once: true });
+        
+        // Also try immediately
+        setTimeout(attemptPlay, 100);
     }
 }
 

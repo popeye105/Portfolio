@@ -78,11 +78,25 @@ function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
     const loadingVideo = document.getElementById('loading-video');
     
-    // Force loading video to play
+    // Multiple attempts to play loading video
     if (loadingVideo) {
-        loadingVideo.play().catch(() => {
-            console.log('Loading video autoplay failed');
-        });
+        loadingVideo.load();
+        
+        const playVideo = () => {
+            loadingVideo.play().catch(() => {
+                console.log('Loading video autoplay failed, trying again...');
+                setTimeout(playVideo, 100);
+            });
+        };
+        
+        setTimeout(playVideo, 100);
+        
+        // Fallback: try to play on user interaction
+        document.addEventListener('click', () => {
+            if (loadingVideo.paused) {
+                loadingVideo.play();
+            }
+        }, { once: true });
     }
     
     // Hide loading screen after 2 seconds
@@ -93,25 +107,41 @@ function initializeLoading() {
             
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
+                // Start background video after loading screen is hidden
+                initializeBackgroundVideo();
             }, 500);
         }
     }, 2000);
 }
 
-// Simple video background
-function initializeVideo() {
+// Background video initialization
+function initializeBackgroundVideo() {
     const video = document.getElementById('bg-video');
     
     if (video) {
-        // Force play if autoplay fails
-        setTimeout(() => {
+        video.load();
+        
+        const playBgVideo = () => {
+            video.play().catch(() => {
+                console.log('Background video autoplay failed, trying again...');
+                setTimeout(playBgVideo, 100);
+            });
+        };
+        
+        setTimeout(playBgVideo, 100);
+        
+        // Fallback: try to play on user interaction
+        document.addEventListener('click', () => {
             if (video.paused) {
-                video.play().catch(() => {
-                    document.addEventListener('click', () => video.play(), { once: true });
-                });
+                video.play();
             }
-        }, 100);
+        }, { once: true });
     }
+}
+
+// Simple video background (legacy function)
+function initializeVideo() {
+    // This is now handled by initializeBackgroundVideo
 }
 
 // Initialize everything when DOM is loaded

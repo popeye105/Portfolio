@@ -85,11 +85,17 @@ function initializeVideo() {
             source.src = 'Portfolio Loop Vid.mp4';
             video.loop = true;
             video.load();
-            video.play();
+            video.play().catch(e => console.log('Loop video play failed'));
         });
         
-        // Start playing intro video
-        video.play();
+        // Start playing intro video with error handling
+        video.play().catch(e => {
+            console.log('Autoplay failed, user interaction required');
+            // Fallback: try to play on user interaction
+            document.addEventListener('click', () => {
+                video.play();
+            }, { once: true });
+        });
     }
 }
 

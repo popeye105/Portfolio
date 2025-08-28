@@ -147,7 +147,7 @@ function toggleMobileMenu() {
     mobileNav.classList.toggle('active');
     
     if (mobileNav.classList.contains('active')) {
-        hamburger.innerHTML = '<span style="font-size: 18px; color: white; font-weight: bold;">✕</span>';
+        hamburger.innerHTML = '<span style="font-size: 20px; color: white; font-weight: bold; line-height: 1;">X</span>';
     } else {
         hamburger.innerHTML = '<span></span><span></span><span></span>';
     }

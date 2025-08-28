@@ -569,6 +569,9 @@ h2 {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
 }
 
 .hamburger span {
@@ -619,17 +622,14 @@ h2 {
     }
     
     nav {
-        padding: 10px;
+        padding: 6px 10px;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        position: relative;
     }
     
     .hamburger {
         display: flex;
-        position: absolute;
-        left: 10px;
     }
     
     .nav-logo {
@@ -701,5 +701,10 @@ h2 {
     .connect-card {
         width: 160px;
         height: 220px;
+    }
+    
+    .education-card-new,
+    .experience-card-new {
+        padding: 20px 15px;
     }
 }

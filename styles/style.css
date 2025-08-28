@@ -145,7 +145,7 @@ nav a:hover {
 /* Sections */
 .section {
     padding: 40px 30px;
-    margin: 20px 0;
+    margin: 40px 0;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(1px);
@@ -190,13 +190,13 @@ h2 {
 
 .profile-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 330px;
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 25px;
-    padding: 15px;
+    padding: 20px;
     position: relative;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .profile-image img {

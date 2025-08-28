@@ -184,7 +184,7 @@ h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: var(--accent-color);
-    text-align: center;
+    text-align: left;
     font-weight: 700;
 }
 
@@ -209,7 +209,7 @@ h2 {
     font-size: 1.1rem;
     color: #ffffff;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
 }
 
 .portfolio-button-container {
@@ -225,7 +225,7 @@ h2 {
     font-size: 0.9rem;
     margin-top: 8px;
     margin-bottom: 0;
-    text-align: center;
+    text-align: left;
     margin-left: 28px;
     margin-right: 12px;
 }
@@ -599,10 +599,40 @@ h2 {
         margin-bottom: 20px;
     }
 
+/* Mobile Skills and Connect - Only for mobile */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .skill-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .connect-cards {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .connect-card {
+        width: 150px;
+        height: 200px;
+    }
     .about-content {
         grid-template-columns: 1fr;
         gap: 20px;
         text-align: center;
+    }
+
+    .name-heading {
+        text-align: center !important;
+    }
+
+    .bio {
+        text-align: center !important;
+        font-size: 1rem;
     }
 
     .profile-image {
@@ -630,33 +660,9 @@ h2 {
         margin-right: 0;
         text-align: center;
     }
-    
-    .bio {
-        font-size: 1rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .skill-logo {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .connect-cards {
-        gap: 15px;
-        justify-content: center;
-    }
-    
-    .connect-card {
-        width: 150px;
-        height: 200px;
-    }
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - Hidden on desktop */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -671,6 +677,7 @@ h2 {
     height: 2px;
     background: white;
     margin: 2px 0;
+    display: block;
 }
 
 .mobile-nav {
@@ -715,19 +722,29 @@ h2 {
     
     nav {
         padding: 6px 10px;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
     }
     
     .hamburger {
         display: flex;
+        justify-self: start;
     }
     
     .nav-logo {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-self: center;
+    }
+    
+    .nav-logo .resume-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
     }
     
     .nav-links {
@@ -739,7 +756,8 @@ h2 {
     }
     
     .resume-btn {
-        margin-top: 8px;
+        justify-self: end;
+        margin-top: 0;
         padding: 6px 12px;
         font-size: 0.75rem;
         width: auto;

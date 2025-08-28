@@ -18,11 +18,8 @@ const experiences = [
     },
 ];
 
-// Social media links
-const socialLinks = [
-    { platform: 'GitHub', icon: 'fa-brands fa-github', url: 'https://github.com/yourusername' },
-    { platform: 'LinkedIn', icon: 'fa-brands fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
-];
+// Social media links - REMOVED
+// const socialLinks = [];
 
 function populateSkills() {
     const skillsGrid = document.querySelector('.skills-grid');
@@ -56,17 +53,7 @@ function populateEducation() {
     // Education info is already in HTML
 }
 
-function populateSocialLinks() {
-    const socialLinksContainer = document.querySelector('.social-links');
-    socialLinks.forEach(social => {
-        const link = document.createElement('a');
-        link.href = social.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.innerHTML = `<i class="${social.icon}"></i>`;
-        socialLinksContainer.appendChild(link);
-    });
-}
+// populateSocialLinks function REMOVED - no longer needed
 
 // Resume download handler
 document.querySelector('.resume-btn').addEventListener('click', () => {
@@ -162,5 +149,5 @@ document.addEventListener('DOMContentLoaded', () => {
     populateSkills();
     populateEducation();
     populateExperience();
-    populateSocialLinks();
+    // populateSocialLinks(); // Removed to eliminate mini social icons
 });

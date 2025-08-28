@@ -142,12 +142,12 @@ function initVideoSequence() {
 // Mobile menu functions
 function toggleMobileMenu() {
     document.querySelector('.mobile-nav').classList.toggle('active');
-    document.querySelector('.mobile-overlay').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
 }
 
 function closeMobileMenu() {
     document.querySelector('.mobile-nav').classList.remove('active');
-    document.querySelector('.mobile-overlay').classList.remove('active');
+    document.querySelector('.hamburger').classList.remove('active');
 }
 
 // Resume download handler

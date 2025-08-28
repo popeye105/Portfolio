@@ -141,13 +141,24 @@ function initVideoSequence() {
 
 // Mobile menu functions
 function toggleMobileMenu() {
-    document.querySelector('.mobile-nav').classList.toggle('active');
-    document.querySelector('.hamburger').classList.toggle('active');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const hamburger = document.querySelector('.hamburger');
+    
+    mobileNav.classList.toggle('active');
+    
+    if (mobileNav.classList.contains('active')) {
+        hamburger.innerHTML = '<span style="font-size: 18px; color: white; font-weight: bold;">✕</span>';
+    } else {
+        hamburger.innerHTML = '<span></span><span></span><span></span>';
+    }
 }
 
 function closeMobileMenu() {
-    document.querySelector('.mobile-nav').classList.remove('active');
-    document.querySelector('.hamburger').classList.remove('active');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const hamburger = document.querySelector('.hamburger');
+    
+    mobileNav.classList.remove('active');
+    hamburger.innerHTML = '<span></span><span></span><span></span>';
 }
 
 // Resume download handler

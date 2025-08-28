@@ -705,24 +705,14 @@ h2 {
     transition: none;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
+/* Remove hamburger transform styles since we're using X symbol */
 
 .mobile-nav {
     position: fixed;
-    top: 66px;
+    top: 50px;
     left: 0;
     width: 100vw;
-    height: calc(50vh - 33px);
+    height: calc(50vh - 25px);
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1001;

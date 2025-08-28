@@ -621,22 +621,25 @@ h2 {
     nav {
         padding: 10px;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        position: relative;
+    }
+    
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 10px;
     }
     
     .nav-logo {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     
     .nav-links {
         display: none;
-    }
-    
-    .hamburger {
-        display: flex;
     }
     
     .mobile-nav {

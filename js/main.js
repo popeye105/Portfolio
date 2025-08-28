@@ -139,6 +139,17 @@ function initVideoSequence() {
     intro.addEventListener('error', switchToLoop);
 }
 
+// Mobile menu
+function toggleMobileMenu() {
+    document.querySelector('.mobile-nav').classList.toggle('active');
+    document.querySelector('.mobile-overlay').classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    document.querySelector('.mobile-nav').classList.remove('active');
+    document.querySelector('.mobile-overlay').classList.remove('active');
+}
+
 // Start everything when page loads
 document.addEventListener('DOMContentLoaded', () => {
     initVideoSequence();

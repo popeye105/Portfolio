@@ -23,6 +23,7 @@
         <nav>
             <div class="nav-logo">
                 <img src="NB Logo.png" alt="Logo" class="logo-img">
+                <button class="resume-btn" type="button">Download Resume</button>
             </div>
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -30,9 +31,22 @@
                 <a href="#education">Education</a>
                 <a href="#experience">Experience</a>
                 <a href="#connect">Connect</a>
-                <button class="resume-btn" type="button">Download Resume</button>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
+
+        <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
+        <div class="mobile-nav">
+            <a href="#about" onclick="closeMobileMenu()">About</a>
+            <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+            <a href="#education" onclick="closeMobileMenu()">Education</a>
+            <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+            <a href="#connect" onclick="closeMobileMenu()">Connect</a>
+        </div>
 
         <section id="about" class="section">
             <div class="about-content">

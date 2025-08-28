@@ -211,6 +211,7 @@ h2 {
     color: #ffffff;
     font-weight: 600;
     text-align: left;
+    margin-left: -20px;
 }
 
 .portfolio-button-container {

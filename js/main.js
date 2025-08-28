@@ -139,7 +139,7 @@ function initVideoSequence() {
     intro.addEventListener('error', switchToLoop);
 }
 
-// Mobile menu
+// Mobile menu functions
 function toggleMobileMenu() {
     document.querySelector('.mobile-nav').classList.toggle('active');
     document.querySelector('.mobile-overlay').classList.toggle('active');
@@ -149,6 +149,16 @@ function closeMobileMenu() {
     document.querySelector('.mobile-nav').classList.remove('active');
     document.querySelector('.mobile-overlay').classList.remove('active');
 }
+
+// Resume download handler
+document.addEventListener('DOMContentLoaded', () => {
+    const resumeBtn = document.querySelector('.resume-btn');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', () => {
+            alert('Error: Not Uploaded Yet');
+        });
+    }
+});
 
 // Start everything when page loads
 document.addEventListener('DOMContentLoaded', () => {

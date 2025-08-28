@@ -220,6 +220,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 30px;
+    margin-left: 45px;
 }
 
 .explore-text {
@@ -480,22 +481,29 @@ h2 {
     }
     
     nav {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
         padding: 8px 15px;
-        gap: 8px;
+        gap: 10px;
+    }
+    
+    .hamburger {
+        display: flex;
+        justify-self: start;
+        align-self: center;
+    }
+    
+    .nav-logo {
+        justify-self: center;
     }
     
     .nav-links {
-        gap: 15px;
-        justify-content: center;
-    }
-    
-    nav a {
-        font-size: 0.85rem;
-        padding: 6px 10px;
+        display: none;
     }
     
     .resume-btn {
+        justify-self: end;
         padding: 6px 12px;
         font-size: 0.8rem;
     }
@@ -631,11 +639,13 @@ h2 {
 
     .name-heading {
         text-align: center !important;
+        margin-left: 0 !important;
     }
 
     .bio {
         text-align: center !important;
         font-size: 1rem;
+        margin-left: 0 !important;
     }
 
     .profile-image {
@@ -673,6 +683,7 @@ h2 {
     padding: 8px;
     border: 1px solid white;
     border-radius: 4px;
+    z-index: 1002;
 }
 
 .hamburger span {
@@ -703,6 +714,7 @@ h2 {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -729,17 +741,13 @@ h2 {
     transition: all 0.3s ease;
     text-align: center;
     min-width: 200px;
-}
-
-.mobile-nav a:first-child {
-    background: rgba(100, 255, 218, 0.2);
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
+    border: 1px solid transparent;
 }
 
 .mobile-nav a:hover {
     background: rgba(100, 255, 218, 0.1);
     color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 
@@ -750,50 +758,11 @@ h2 {
     
     nav {
         padding: 6px 10px;
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .hamburger {
-        display: flex;
-        justify-self: start;
-        align-self: center;
-    }
-    
-    .nav-logo {
-        display: flex;
-        align-items: center;
-        justify-self: center;
     }
     
     .resume-btn {
-        display: block;
-        justify-self: end;
-        align-self: center;
-        margin-top: 0;
-        padding: 1px 3px;
-        font-size: 0.5rem;
-        width: auto;
-        border: 0.3px solid var(--accent-color);
-        border-radius: 2px;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-nav {
-        display: block;
-    }
-    
-    .resume-btn {
-        justify-self: end;
-        margin-top: 0;
-        padding: 6px 12px;
-        font-size: 0.75rem;
-        width: auto;
+        padding: 4px 8px;
+        font-size: 0.7rem;
     }
     
     .section {

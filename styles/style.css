@@ -489,7 +489,7 @@ h2 {
     }
     
     .hamburger {
-        display: flex;
+        display: flex !important;
         justify-self: start;
         align-self: center;
     }
@@ -498,6 +498,7 @@ h2 {
         justify-self: center;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     
     .nav-links {
@@ -506,8 +507,10 @@ h2 {
     
     .resume-btn {
         justify-self: end;
+        align-self: start;
         padding: 6px 12px;
         font-size: 0.8rem;
+        margin-top: 0;
     }
 
     .section {
@@ -599,6 +602,10 @@ h2 {
     
     .footer-content {
         padding: 25px var(--mobile-padding) 15px;
+    }
+    
+    .footer-content > div {
+        margin-bottom: 15px;
     }
 }
 

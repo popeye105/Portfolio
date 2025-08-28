@@ -8,24 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Video Background -->
-    <video id="intro-video" autoplay muted playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+    <video id="intro-video" autoplay muted playsinline preload="auto" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1; background: #000;">
         <source src="PB.webm" type="video/webm">
     </video>
     
-    <video id="loop-video" muted loop playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1; display: none;">
+    <video id="loop-video" muted playsinline preload="auto" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1; display: none; background: #000;">
         <source src="PB Loop.webm" type="video/webm">
     </video>
 
-    <!-- Loading Screen -->
     <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; display: none; flex-direction: column; justify-content: center; align-items: center; background: rgba(0,0,0,0.8);">
         <div style="position: absolute; bottom: 50px; color: white; font-size: 18px; font-family: 'Inter', sans-serif; letter-spacing: 2px;">LOADING...</div>
     </div>
-
-
-    <!-- Main Container -->
     <div class="container">
-        <!-- Navigation -->
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -35,30 +29,30 @@
             <button class="resume-btn">Download Resume</button>
         </nav>
 
-        <!-- About Section -->
         <section id="about" class="section">
-            <h2>About</h2>
             <div class="about-content">
-                <div class="profile-image">
-                    <!-- Profile image placeholder -->
-                    <img src="assets/profile-placeholder.jpg" alt="Profile Picture">
+                <div class="profile-section">
+                    <h2 class="about-heading">About</h2>
+                    <div class="profile-image">
+                        <img src="Port Pic.jpg" alt="Profile Picture">
+                    </div>
                 </div>
                 <div class="bio">
-                    <p>Hello! I'm [Your Name]</p>
-                    <p>A passionate [Your Profession] with interests in [Your Interests]. I love exploring new technologies and continuously learning in this ever-evolving field.</p>
+                    <h2 class="name-heading">MOHD ARBAB RIZVI</h2>
+                    <p>I am a passionate Computer Science student and an enthusiastic learner. I've built a foundational skill set in web development and I'm currently focused on mastering Data Structures and Algorithms in Java. I'm always on the lookout for new technologies and eager to take on new challenges.</p>
+                    <div class="portfolio-button-container">
+                        <a href="https://ariz17.vercel.app" class="portfolio-95-btn">The '95 Portfolio</a>
+                        <p class="explore-text">(Click to explore)</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="section">
             <h2>Tech Stack</h2>
-            <div class="skills-grid">
-                <!-- Skills will be populated via JavaScript -->
-            </div>
+            <div class="skills-grid"></div>
         </section>
 
-        <!-- Education Section -->
         <section id="education" class="section">
             <h2>Education</h2>
             <div class="education-card">
@@ -68,23 +62,58 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="section">
             <h2>Experience</h2>
-            <div class="experience-timeline">
-                <!-- Experience cards will be populated via JavaScript -->
-            </div>
+            <div class="experience-timeline"></div>
         </section>
 
-        <!-- Connect Section -->
         <section id="connect" class="section">
             <h2>Let's Connect</h2>
-            <div class="social-links">
-                <!-- Social links will be populated via JavaScript -->
+            <div class="connect-cards">
+                <a href="#" class="connect-card-link">
+                    <div class="connect-card">
+                        <div class="card-border-animation"></div>
+                        <div class="card-content">
+                            <img src="TS Logo/GITHUB.png" alt="Github" class="card-icon">
+                            <h3 class="card-title">Github</h3>
+                            <p class="card-description">View my repositories</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="connect-card-link">
+                    <div class="connect-card">
+                        <div class="card-border-animation"></div>
+                        <div class="card-content">
+                            <img src="TS Logo/GITHUB.png" alt="LinkedIn" class="card-icon">
+                            <h3 class="card-title">LinkedIn</h3>
+                            <p class="card-description">Professional network</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="connect-card-link">
+                    <div class="connect-card">
+                        <div class="card-border-animation"></div>
+                        <div class="card-content">
+                            <img src="TS Logo/PYTHON.png" alt="Email" class="card-icon">
+                            <h3 class="card-title">Email</h3>
+                            <p class="card-description">Get in touch</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="connect-card-link">
+                    <div class="connect-card">
+                        <div class="card-border-animation"></div>
+                        <div class="card-content">
+                            <img src="TS Logo/HTML5.png" alt="Resume" class="card-icon">
+                            <h3 class="card-title">Resume</h3>
+                            <p class="card-description">Download CV</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+            <div class="social-links"></div>
         </section>
 
-        <!-- Contact Information -->
         <footer>
             <p>📧 [Your Email]</p>
             <p>📍 [Your Location]</p>

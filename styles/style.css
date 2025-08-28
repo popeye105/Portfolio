@@ -45,11 +45,10 @@ body {
 
 /* Navigation */
 nav {
-    padding: 20px 0;
+    padding: 10px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
     position: sticky;
     top: 0;
     background: #2d2d2d;
@@ -62,6 +61,23 @@ nav {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+}
+
+.nav-logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
 }
 
 nav a {

@@ -190,10 +190,11 @@ h2 {
 
 .profile-image {
     width: 100%;
+    max-width: 350px;
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 25px;
-    padding: 35px;
+    padding: 20px;
     position: relative;
 }
 
@@ -201,8 +202,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    margin-top: 10px;
-    margin-left: 25px;
+    margin: 0;
 }
 
 .bio {
@@ -513,16 +513,17 @@ h2 {
     }
 
     .profile-image {
-        max-width: 250px;
+        max-width: 280px;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
+        padding: 15px;
     }
 
     .profile-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         margin: 0;
     }
 
@@ -597,15 +598,16 @@ h2 {
     }
     
     .profile-image {
-        max-width: 200px;
+        max-width: 220px;
         aspect-ratio: 1;
         height: auto;
+        padding: 10px;
     }
 
     .profile-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         margin: 0;
     }
 

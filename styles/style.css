@@ -456,6 +456,10 @@ h2 {
     background: transparent;
 }
 
+.footer-content > div {
+    margin-bottom: 45px;
+}
+
 .footer-content p {
     margin: 10px 0;
     font-size: 1rem;

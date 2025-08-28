@@ -96,40 +96,59 @@ function initializeLoading() {
     }, 2000);
 }
 
-// Initialize floating particles background
-function initializeParticles() {
-    const particlesContainer = document.querySelector('.particles');
+// Background video initialization
+function initializeBackgroundVideo() {
+    const video = document.getElementById('bg-video');
     
-    if (particlesContainer) {
-        // Create floating particles
-        for (let i = 0; i < 15; i++) {
-            const particle = document.createElement('div');
-            const size = Math.random() * 4 + 2;
-            const opacity = Math.random() * 0.6 + 0.2;
-            const duration = Math.random() * 8 + 4;
-            const delay = Math.random() * 4;
-            
-            particle.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                background: rgba(100, 255, 218, ${opacity});
-                border-radius: 50%;
-                top: ${Math.random() * 100}%;
-                left: ${Math.random() * 100}%;
-                animation: float ${duration}s ease-in-out infinite;
-                animation-delay: ${delay}s;
-                box-shadow: 0 0 ${size * 2}px rgba(100, 255, 218, 0.3);
-            `;
-            particlesContainer.appendChild(particle);
-        }
+    if (video) {
+        console.log('Loading Portfolio Background video...');
+        
+        // Set video properties for optimal playback
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.loop = true;
+        video.setAttribute('webkit-playsinline', '');
+        
+        // Handle successful video load
+        video.addEventListener('loadeddata', () => {
+            console.log('Portfolio Background video loaded successfully!');
+            video.style.opacity = '1';
+        });
+        
+        video.addEventListener('canplay', () => {
+            console.log('Video ready to play');
+            video.play().then(() => {
+                console.log('Portfolio Background video playing successfully!');
+                video.style.opacity = '1';
+            }).catch(e => {
+                console.log('Autoplay blocked, will play on user interaction:', e);
+                // Add click listener to start video on user interaction
+                document.addEventListener('click', () => {
+                    video.play();
+                    video.style.opacity = '1';
+                }, { once: true });
+            });
+        });
+        
+        // Handle errors
+        video.addEventListener('error', (e) => {
+            console.log('Video loading failed:', e);
+            video.style.display = 'none';
+        });
+        
+        // Load the video
+        video.load();
+        
+    } else {
+        console.log('Video element not found');
     }
 }
 
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initializeParticles();
+    initializeBackgroundVideo();
     initializeLoading();
     populateSkills();
     populateEducation();

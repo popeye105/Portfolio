@@ -719,10 +719,10 @@ h2 {
 
 .mobile-nav {
     position: fixed;
-    top: 0;
+    top: 66px;
     left: 0;
     width: 100vw;
-    height: 50vh;
+    height: calc(50vh - 33px);
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1001;

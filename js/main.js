@@ -55,10 +55,7 @@ function populateEducation() {
 
 // populateSocialLinks function REMOVED - no longer needed
 
-// Resume download handler
-document.querySelector('.resume-btn').addEventListener('click', () => {
-    window.open('path/to/your/resume.pdf', '_blank');
-});
+// Resume download handler - disabled for now
 
 function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');

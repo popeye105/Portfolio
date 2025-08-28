@@ -605,7 +605,11 @@ h2 {
     }
     
     .footer-content > div {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-content p {
+        margin: 15px 0;
     }
 }
 

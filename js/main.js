@@ -82,23 +82,51 @@ document.querySelector('.resume-btn').addEventListener('click', () => {
 // Loading screen management
 function initializeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
+    const video = document.getElementById('background-video');
     
-    // Hide loading screen after 2 seconds
-    setTimeout(() => {
-        if (loadingScreen) {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.transition = 'opacity 0.5s ease-out';
-            
+    // Wait for video to be ready before hiding loading screen
+    if (video) {
+        video.addEventListener('canplay', () => {
             setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }
-    }, 2000);
+                if (loadingScreen) {
+                    loadingScreen.style.opacity = '0';
+                    loadingScreen.style.transition = 'opacity 0.5s ease-out';
+                    
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1000);
+        });
+        
+        // Fallback: hide after 3 seconds even if video doesn't load
+        setTimeout(() => {
+            if (loadingScreen && loadingScreen.style.display !== 'none') {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.transition = 'opacity 0.5s ease-out';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }
+        }, 3000);
+    } else {
+        // No video, hide after 2 seconds
+        setTimeout(() => {
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.transition = 'opacity 0.5s ease-out';
+                
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }
+        }, 2000);
+    }
 }
 
 // Background video initialization
 function initializeBackgroundVideo() {
-    const video = document.getElementById('bg-video');
+    const video = document.getElementById('background-video');
     
     if (video) {
         console.log('Loading Portfolio Background video...');
@@ -146,9 +174,62 @@ function initializeBackgroundVideo() {
 }
 
 
+// Simple video initialization
+function initVideo() {
+    const video = document.getElementById('background-video');
+    if (video) {
+        console.log('Video element found, src:', video.src);
+        
+        // Remove controls after testing
+        setTimeout(() => {
+            video.removeAttribute('controls');
+        }, 3000);
+        
+        video.addEventListener('canplay', () => {
+            console.log('Video can play');
+            video.play().catch(e => console.log('Autoplay blocked:', e));
+        });
+        
+        video.addEventListener('error', (e) => {
+            console.error('Video error:', video.error);
+        });
+        
+        // Manual play button for testing
+        document.addEventListener('keydown', (e) => {
+            if (e.key === ' ') {
+                e.preventDefault();
+                video.play();
+            }
+        });
+    }
+}
+
+// Video sequence management
+function initVideoSequence() {
+    const introVideo = document.getElementById('intro-video');
+    const loopVideo = document.getElementById('loop-video');
+    
+    if (introVideo && loopVideo) {
+        // When intro video ends, switch to loop video
+        introVideo.addEventListener('ended', () => {
+            introVideo.style.display = 'none';
+            loopVideo.style.display = 'block';
+            loopVideo.play();
+        });
+        
+        // Handle intro video errors
+        introVideo.addEventListener('error', () => {
+            console.log('Intro video failed, switching to loop');
+            introVideo.style.display = 'none';
+            loopVideo.style.display = 'block';
+            loopVideo.play();
+        });
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initializeBackgroundVideo();
+    initVideoSequence();
     initializeLoading();
     populateSkills();
     populateEducation();

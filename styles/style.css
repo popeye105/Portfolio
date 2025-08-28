@@ -697,43 +697,47 @@ h2 {
 
 .mobile-nav {
     position: fixed;
-    top: 0;
+    top: 62px;
     left: 0;
     width: 100vw;
-    height: 100vh;
     background: rgba(0, 0, 0, 0.95);
     z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
 }
 
 .mobile-nav.active {
-    opacity: 1;
-    visibility: visible;
+    transform: translateY(0);
 }
 
 .mobile-nav a {
+    display: block;
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
-    padding: 15px 30px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    padding: 15px 20px;
     text-align: center;
-    min-width: 200px;
+    transition: all 0.3s ease;
+    animation: slideDown 0.3s ease forwards;
 }
 
-.mobile-nav a:first-child {
-    background: rgba(100, 255, 218, 0.2);
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
+.mobile-nav a:nth-child(1) { animation-delay: 0.1s; }
+.mobile-nav a:nth-child(2) { animation-delay: 0.2s; }
+.mobile-nav a:nth-child(3) { animation-delay: 0.3s; }
+.mobile-nav a:nth-child(4) { animation-delay: 0.4s; }
+.mobile-nav a:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .mobile-nav a:hover {
@@ -772,11 +776,15 @@ h2 {
         justify-self: end;
         align-self: center;
         margin-top: 0;
-        padding: 1px 3px;
-        font-size: 0.5rem;
+        padding: 1px 2px;
+        font-size: 0.45rem;
         width: auto;
-        border: 0.3px solid var(--accent-color);
-        border-radius: 2px;
+        max-width: 60px;
+        border: 0.2px solid var(--accent-color);
+        border-radius: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .nav-links {

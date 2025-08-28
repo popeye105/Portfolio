@@ -496,6 +496,8 @@ h2 {
     
     .nav-logo {
         justify-self: center;
+        display: flex;
+        align-items: center;
     }
     
     .nav-links {
@@ -666,6 +668,7 @@ h2 {
     .portfolio-button-container {
         align-items: center;
         text-align: center;
+        margin-left: 0 !important;
     }
 
     .explore-text {

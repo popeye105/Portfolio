@@ -96,57 +96,40 @@ function initializeLoading() {
     }, 2000);
 }
 
-// Background video initialization
-function initializeBackgroundVideo() {
-    const video = document.getElementById('bg-video');
+// Initialize floating particles background
+function initializeParticles() {
+    const particlesContainer = document.querySelector('.particles');
     
-    if (video) {
-        // Force all video properties immediately
-        video.muted = true;
-        video.autoplay = true;
-        video.loop = true;
-        video.playsInline = true;
-        video.defaultMuted = true;
-        
-        // Multiple aggressive play attempts
-        const forcePlay = () => {
-            video.currentTime = 0;
-            video.play().catch(() => {
-                // Retry every 50ms
-                setTimeout(forcePlay, 50);
-            });
-        };
-        
-        // Start immediately
-        forcePlay();
-        
-        // Also try when metadata loads
-        video.addEventListener('loadedmetadata', forcePlay);
-        video.addEventListener('canplay', forcePlay);
-        
-        // Force load
-        video.load();
+    if (particlesContainer) {
+        // Create floating particles
+        for (let i = 0; i < 15; i++) {
+            const particle = document.createElement('div');
+            const size = Math.random() * 4 + 2;
+            const opacity = Math.random() * 0.6 + 0.2;
+            const duration = Math.random() * 8 + 4;
+            const delay = Math.random() * 4;
+            
+            particle.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                background: rgba(100, 255, 218, ${opacity});
+                border-radius: 50%;
+                top: ${Math.random() * 100}%;
+                left: ${Math.random() * 100}%;
+                animation: float ${duration}s ease-in-out infinite;
+                animation-delay: ${delay}s;
+                box-shadow: 0 0 ${size * 2}px rgba(100, 255, 218, 0.3);
+            `;
+            particlesContainer.appendChild(particle);
+        }
     }
 }
 
-// Simple video background (legacy function)
-function initializeVideo() {
-    // This is now handled by initializeBackgroundVideo
-}
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Start background video immediately
-    const bgVideo = document.getElementById('bg-video');
-    if (bgVideo) {
-        bgVideo.muted = true;
-        bgVideo.autoplay = true;
-        bgVideo.loop = true;
-        bgVideo.playsInline = true;
-        bgVideo.defaultMuted = true;
-        bgVideo.play().catch(() => {}); // Ignore errors
-    }
-    
+    initializeParticles();
     initializeLoading();
     populateSkills();
     populateEducation();

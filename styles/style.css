@@ -702,7 +702,7 @@ h2 {
     background: white;
     margin: 2px 0;
     display: block;
-    transition: all 0.3s ease;
+    transition: none;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -719,7 +719,7 @@ h2 {
 
 .mobile-nav {
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
     width: 100vw;
     height: 50vh;
@@ -728,10 +728,9 @@ h2 {
     z-index: 1001;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 30px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;

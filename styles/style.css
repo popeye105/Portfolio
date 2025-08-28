@@ -190,12 +190,13 @@ h2 {
 
 .profile-image {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 25px;
-    padding: 20px;
+    padding: 15px;
     position: relative;
+    margin-left: 30px;
 }
 
 .profile-image img {
@@ -730,6 +731,7 @@ h2 {
     .hamburger {
         display: flex;
         justify-self: start;
+        align-self: start;
     }
     
     .nav-logo {
@@ -739,12 +741,13 @@ h2 {
         justify-self: center;
     }
     
-    .nav-logo .resume-btn {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+    .resume-btn {
+        justify-self: end;
+        align-self: center;
         margin-top: 0;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        width: auto;
     }
     
     .nav-links {

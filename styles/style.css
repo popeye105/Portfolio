@@ -772,7 +772,7 @@ h2 {
     
     .typing-container {
         justify-content: center !important;
-        margin-left: 0 !important;
+        margin-left: 10px !important;
         text-align: center !important;
         display: flex !important;
         align-items: center !important;

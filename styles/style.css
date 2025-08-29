@@ -664,16 +664,16 @@ h2 {
     }
 
     .profile-image {
-        max-width: 300px;
+        max-width: 350px;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 20px;
+        padding: 25px;
     }
 
     .profile-image img {
-        width: 120%;
-        height: 120%;
+        width: 150%;
+        height: 150%;
         object-fit: contain;
         margin: 0;
     }

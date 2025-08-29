@@ -612,13 +612,21 @@ h2 {
         justify-self: end;
         align-self: start;
         padding: 6px 12px;
-        font-size: 0;
+        font-size: 0.8rem;
         margin-top: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        position: relative;
     }
     
     .resume-btn::after {
         content: "View Resume";
         font-size: 0.8rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-indent: 0;
     }
 
     .section {

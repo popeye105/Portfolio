@@ -766,7 +766,7 @@ h2 {
     
     .typing-container {
         justify-content: flex-start !important;
-        margin-left: 0 !important;
+        margin-left: 10px !important;
         text-align: left !important;
         display: flex !important;
         align-items: center !important;

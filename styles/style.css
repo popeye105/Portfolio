@@ -547,7 +547,7 @@ h2 {
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 35px;
+        padding: 45px;
     }
     
     .bio {
@@ -676,7 +676,7 @@ h2 {
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 35px;
+        padding: 45px;
     }
 
     .profile-image img {
@@ -717,6 +717,19 @@ h2 {
     margin: 2px 0;
     display: block;
     transition: none;
+}
+
+.hamburger .x-symbol {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin: 0;
 }
 
 /* Remove hamburger transform styles since we're using X symbol */
@@ -793,7 +806,7 @@ h2 {
         max-width: 320px;
         aspect-ratio: 1;
         height: auto;
-        padding: 35px;
+        padding: 45px;
     }
 
     .profile-image img {

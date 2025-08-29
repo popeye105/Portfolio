@@ -368,7 +368,7 @@ h2 {
     position: relative;
     width: 190px;
     height: 254px;
-    background: #07182E;
+    background: #2d2d2d;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -403,7 +403,7 @@ h2 {
 .card-content {
     position: absolute;
     inset: 5px;
-    background: #07182E;
+    background: #2d2d2d;
     border-radius: 12px;
     display: flex;
     flex-direction: column;

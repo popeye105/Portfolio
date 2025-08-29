@@ -1,3 +1,29 @@
+// Video sequence handler
+function initVideoSequence() {
+    const introVideo = document.getElementById('intro-video');
+    const loopVideo = document.getElementById('loop-video');
+    
+    if (introVideo && loopVideo) {
+        // Set intro video to stop at 14 seconds
+        introVideo.addEventListener('timeupdate', function() {
+            if (introVideo.currentTime >= 14) {
+                introVideo.pause();
+                introVideo.style.display = 'none';
+                loopVideo.style.display = 'block';
+                loopVideo.currentTime = 0;
+                loopVideo.play();
+            }
+        });
+        
+        // Set loop video to loop only first 9 seconds
+        loopVideo.addEventListener('timeupdate', function() {
+            if (loopVideo.currentTime >= 9) {
+                loopVideo.currentTime = 0;
+            }
+        });
+    }
+}
+
 // My skills and tech stack
 const skills = [
     { name: 'HTML', image: 'TS Logo/HTML5.png' },
@@ -106,37 +132,68 @@ function initVideoSequence() {
     loop.load();
     loop.preload = 'auto';
     
-    const switchToLoop = () => {
-        // Wait for loop video to be ready before switching
+    const smoothSwitchToLoop = () => {
+        // Ensure loop video is ready
         if (loop.readyState >= 3) {
-            loop.style.display = 'block';
             loop.currentTime = 0;
             loop.play().then(() => {
-                intro.style.display = 'none';
-                // Start the 9-second interval immediately after first play
-                setInterval(() => {
-                    loop.currentTime = 0;
-                    loop.play();
-                }, 9000);
+                // Fade out intro, fade in loop
+                intro.style.opacity = '0';
+                loop.style.opacity = '1';
+                
+                // Remove intro after transition
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                }, 500);
+                
+                // Smooth loop transition
+                let hasLooped = false;
+                loop.addEventListener('timeupdate', () => {
+                    if (loop.currentTime >= 8.5 && !hasLooped) {
+                        hasLooped = true;
+                        loop.style.opacity = '0';
+                        setTimeout(() => {
+                            loop.currentTime = 0;
+                            loop.style.opacity = '1';
+                            hasLooped = false;
+                        }, 300);
+                    }
+                });
             });
         } else {
             loop.addEventListener('canplay', () => {
-                loop.style.display = 'block';
                 loop.currentTime = 0;
                 loop.play().then(() => {
-                    intro.style.display = 'none';
-                    // Start the 9-second interval immediately after first play
-                    setInterval(() => {
-                        loop.currentTime = 0;
-                        loop.play();
-                    }, 9000);
+                    // Fade out intro, fade in loop
+                    intro.style.opacity = '0';
+                    loop.style.opacity = '1';
+                    
+                    // Remove intro after transition
+                    setTimeout(() => {
+                        intro.style.display = 'none';
+                    }, 500);
+                    
+                    // Smooth loop transition
+                    let hasLooped = false;
+                    loop.addEventListener('timeupdate', () => {
+                        if (loop.currentTime >= 8.5 && !hasLooped) {
+                            hasLooped = true;
+                            loop.style.opacity = '0';
+                            setTimeout(() => {
+                                loop.currentTime = 0;
+                                loop.style.opacity = '1';
+                                hasLooped = false;
+                            }, 300);
+                        }
+                    });
                 });
             }, { once: true });
         }
     };
     
-    setTimeout(switchToLoop, 14000);
-    intro.addEventListener('error', switchToLoop);
+    // Switch at 13.5 seconds for smoother transition
+    setTimeout(smoothSwitchToLoop, 13500);
+    intro.addEventListener('error', smoothSwitchToLoop);
 }
 
 // Mobile menu functions
@@ -161,22 +218,20 @@ function closeMobileMenu() {
     hamburger.innerHTML = '<span></span><span></span><span></span>';
 }
 
+
 // Resume download handler
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize video sequence
+    initVideoSequence();
+    
+    
     const resumeBtn = document.querySelector('.resume-btn');
     if (resumeBtn) {
         resumeBtn.addEventListener('click', () => {
             alert('Error: Not Uploaded Yet');
         });
     }
+    
+    populateSkills();
 });
 
-// Start everything when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    initVideoSequence();
-    initializeLoading();
-    populateSkills();
-    populateEducation();
-    populateExperience();
-    // populateSocialLinks(); // Removed to eliminate mini social icons
-});

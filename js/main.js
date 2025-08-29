@@ -29,10 +29,11 @@ function initVideoSequence() {
     const video = document.getElementById('background-video');
     if (!video) return;
     
-    // Add smooth transition for seamless looping
-    video.addEventListener('ended', () => {
-        video.currentTime = 0;
-        video.play();
+    // Loop only first 14 seconds with smooth transition
+    video.addEventListener('timeupdate', () => {
+        if (video.currentTime >= 14) {
+            video.currentTime = 0;
+        }
     });
     
     // Ensure smooth playback

@@ -434,8 +434,6 @@ h2 {
     margin: 4px 0 0 0;
 }
 
-/* Connect Section - Social links removed */
-
 /* Website Footer */
 .website-footer {
     background: #2d2d2d;
@@ -666,11 +664,11 @@ h2 {
     }
 
     .profile-image {
-        max-width: 280px;
+        max-width: 300px;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 15px;
+        padding: 20px;
     }
 
     .profile-image img {

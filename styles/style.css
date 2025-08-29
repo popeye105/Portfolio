@@ -547,13 +547,13 @@ h2 {
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 30px;
+        padding: 35px;
     }
     
     .bio {
         font-size: 1.05rem;
         text-align: center;
-        margin-top: 15px;
+        margin-top: -5px;
     }
     
     .portfolio-button-container {
@@ -661,12 +661,14 @@ h2 {
     .name-heading {
         text-align: center !important;
         margin-left: 0 !important;
+        margin-top: -10px;
     }
 
     .bio {
         text-align: center !important;
         font-size: 1rem;
         margin-left: 0 !important;
+        margin-top: -5px;
     }
 
     .profile-image {
@@ -674,7 +676,7 @@ h2 {
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 20px;
+        padding: 35px;
     }
 
     .profile-image img {
@@ -791,7 +793,7 @@ h2 {
         max-width: 320px;
         aspect-ratio: 1;
         height: auto;
-        padding: 20px;
+        padding: 35px;
     }
 
     .profile-image img {

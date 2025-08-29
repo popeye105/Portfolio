@@ -547,7 +547,7 @@ h2 {
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 45px;
+        padding: 15px;
     }
     
     .bio {
@@ -676,7 +676,7 @@ h2 {
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 45px;
+        padding: 15px;
     }
 
     .profile-image img {
@@ -806,7 +806,7 @@ h2 {
         max-width: 320px;
         aspect-ratio: 1;
         height: auto;
-        padding: 45px;
+        padding: 15px;
     }
 
     .profile-image img {

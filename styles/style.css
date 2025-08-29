@@ -193,10 +193,12 @@ nav a:hover {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.7rem;
     margin-bottom: 40px;
     color: white;
     text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 /* About Section */
@@ -626,9 +628,11 @@ h2 {
     }
     
     h2 {
-        font-size: 1.6rem;
+        font-size: 2.1rem;
         margin-bottom: 25px;
         text-align: center;
+        font-weight: 700;
+        letter-spacing: 2px;
     }
 
     .about-content {
@@ -726,8 +730,10 @@ h2 {
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         margin-bottom: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
     }
 
 /* Mobile Skills and Connect - Only for mobile */
@@ -925,7 +931,9 @@ h2 {
     }
     
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
     }
     
     .profile-image {

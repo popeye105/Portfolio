@@ -659,7 +659,7 @@ h2 {
     }
 
     .profile-image {
-        max-width: 320px;
+        max-width: 420px;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
@@ -950,7 +950,7 @@ h2 {
     }
     
     .profile-image {
-        max-width: 320px;
+        max-width: 420px;
         aspect-ratio: 1;
         height: auto;
         padding: 15px;

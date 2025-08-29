@@ -659,11 +659,11 @@ h2 {
     }
 
     .profile-image {
-        max-width: 420px;
+        max-width: 90vw;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 15px;
+        padding: 5px;
     }
     
     .bio {
@@ -817,11 +817,11 @@ h2 {
     }
 
     .profile-image {
-        max-width: 420px;
+        max-width: 90vw;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 15px;
+        padding: 5px;
     }
 
     .profile-image img {
@@ -950,10 +950,10 @@ h2 {
     }
     
     .profile-image {
-        max-width: 420px;
+        max-width: 90vw;
         aspect-ratio: 1;
         height: auto;
-        padding: 15px;
+        padding: 5px;
     }
 
     .profile-image img {

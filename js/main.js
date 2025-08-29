@@ -60,22 +60,31 @@ function closeMobileMenu() {
 
 function initTypingAnimation() {
     const typingText = document.getElementById('typing-text');
-    const phrases = ['Tech Enthusiast', 'Problem Solver', 'Web Developer'];
+    const phrases = ['Frontend Developer', 'Tech Enthusiast', 'Problem Solver'];
     let currentPhrase = 0, currentChar = 0, isDeleting = false;
     
     function typeEffect() {
         const current = phrases[currentPhrase];
-        typingText.textContent = current.substring(0, isDeleting ? currentChar-- : currentChar++);
+        
+        if (isDeleting) {
+            typingText.textContent = current.substring(0, currentChar);
+            currentChar--;
+        } else {
+            typingText.textContent = current.substring(0, currentChar);
+            currentChar++;
+        }
         
         let typeSpeed = isDeleting ? 50 : 100;
         
-        if (!isDeleting && currentChar === current.length) {
-            typeSpeed = 2000;
+        if (!isDeleting && currentChar > current.length) {
+            typeSpeed = 2000; // Pause after complete word
             isDeleting = true;
-        } else if (isDeleting && currentChar === 0) {
+            currentChar = current.length;
+        } else if (isDeleting && currentChar < 0) {
             isDeleting = false;
             currentPhrase = (currentPhrase + 1) % phrases.length;
-            typeSpeed = 500;
+            currentChar = 0;
+            typeSpeed = 500; // Pause before new word
         }
         
         setTimeout(typeEffect, typeSpeed);

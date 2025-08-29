@@ -219,11 +219,49 @@ function closeMobileMenu() {
 }
 
 
+// Typing animation
+function initTypingAnimation() {
+    const typingText = document.getElementById('typing-text');
+    const phrases = ['Tech Enthusiast', 'Problem Solver', 'Web Developer'];
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    
+    function typeEffect() {
+        const current = phrases[currentPhrase];
+        
+        if (isDeleting) {
+            typingText.textContent = current.substring(0, currentChar - 1);
+            currentChar--;
+        } else {
+            typingText.textContent = current.substring(0, currentChar + 1);
+            currentChar++;
+        }
+        
+        let typeSpeed = isDeleting ? 50 : 100;
+        
+        if (!isDeleting && currentChar === current.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && currentChar === 0) {
+            isDeleting = false;
+            currentPhrase = (currentPhrase + 1) % phrases.length;
+            typeSpeed = 500;
+        }
+        
+        setTimeout(typeEffect, typeSpeed);
+    }
+    
+    typeEffect();
+}
+
 // Resume download handler
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize video sequence
     initVideoSequence();
     
+    // Initialize typing animation
+    initTypingAnimation();
     
     const resumeBtn = document.querySelector('.resume-btn');
     if (resumeBtn) {

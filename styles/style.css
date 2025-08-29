@@ -370,10 +370,10 @@ h2 {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     text-align: center;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -396,9 +396,13 @@ h2 {
     height: 80px;
     object-fit: cover;
     margin-bottom: 10px;
-    border: 2px solid red;
+    border: 2px solid #64ffda;
     border-radius: 50%;
     padding: 5px;
+}
+
+.skill-logo.red-border {
+    border: 2px solid red;
 }
 
 .skill-item p {
@@ -684,7 +688,7 @@ h2 {
     }
     
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         max-width: 100%;
     }

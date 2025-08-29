@@ -1,12 +1,16 @@
 
 // My skills and tech stack
 const skills = [
+    { name: 'MYSQL', image: 'TS Logo/MYSQL.png' },
+    { name: 'DOCKER', image: 'TS Logo/DOCKER.png' },
+    { name: 'PYTHON', image: 'TS Logo/PYTHON.png' },
+    { name: 'MONGODB', image: 'TS Logo/MONGODB.png' },
     { name: 'HTML', image: 'TS Logo/HTML5.png' },
     { name: 'CSS', image: 'TS Logo/CSS3.png' },
-    { name: 'PYTHON', image: 'TS Logo/PYTHON.png' },
-    { name: 'JAVA', image: 'TS Logo/JAVA.png' },
     { name: 'JS', image: 'TS Logo/JAVASCRIPT.png' },
+    { name: 'JAVA', image: 'TS Logo/JAVA.png' },
     { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
+    { name: 'SKLEARN', image: 'TS Logo/SKLEARN.png' },
 ];
 
 
@@ -16,7 +20,7 @@ function populateSkills() {
         const skillItem = document.createElement('div');
         skillItem.className = 'skill-item';
         skillItem.innerHTML = `
-            <img src="${skill.image}" alt="${skill.name}" class="skill-logo">
+            <img src="${skill.image}" alt="${skill.name}" class="skill-logo red-border">
             <p>${skill.name}</p>
         `;
         skillsGrid.appendChild(skillItem);

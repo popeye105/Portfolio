@@ -638,7 +638,7 @@ h2 {
 
     .section {
         padding: 30px var(--mobile-padding);
-        margin: 50px 0;
+        margin: 45px 0;
     }
     
     .section:first-of-type {
@@ -675,7 +675,7 @@ h2 {
     .bio {
         font-size: 1.05rem;
         text-align: center;
-        margin-top: -5px;
+        margin-top: -10px;
     }
     
     .portfolio-button-container {
@@ -796,21 +796,21 @@ h2 {
         display: flex !important;
         align-items: center !important;
         width: 100% !important;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     
     .bio-description {
         text-align: center !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        margin-top: 15px;
+        margin-top: 10px;
     }
     
     .portfolio-button-container {
         align-items: center !important;
         text-align: center !important;
         margin-left: 0 !important;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     
     .explore-text {

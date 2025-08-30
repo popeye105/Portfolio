@@ -661,15 +661,15 @@ h2 {
 
     .profile-section {
         align-items: center;
-        margin-top: 30px;
+        margin-top: -10px;
     }
 
     .profile-image {
-        max-width: 90vw;
+        max-width: 95vw;
         margin: 0 auto;
         aspect-ratio: 1;
         height: auto;
-        padding: 5px;
+        padding: 2px;
     }
     
     .bio {
@@ -967,10 +967,10 @@ h2 {
     }
     
     .profile-image {
-        max-width: 90vw;
+        max-width: 98vw;
         aspect-ratio: 1;
         height: auto;
-        padding: 5px;
+        padding: 1px;
     }
 
     .profile-image img {

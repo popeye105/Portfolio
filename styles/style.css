@@ -661,6 +661,7 @@ h2 {
 
     .profile-section {
         align-items: center;
+        margin-top: 30px;
     }
 
     .profile-image {
@@ -784,7 +785,7 @@ h2 {
     .name-heading {
         text-align: center !important;
         margin-left: 0 !important;
-        margin-top: 10px;
+        margin-top: 40px;
         font-size: 1.8rem !important;
     }
     
@@ -795,18 +796,21 @@ h2 {
         display: flex !important;
         align-items: center !important;
         width: 100% !important;
+        margin-top: 10px;
     }
     
     .bio-description {
         text-align: center !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        margin-top: 15px;
     }
     
     .portfolio-button-container {
         align-items: center !important;
         text-align: center !important;
         margin-left: 0 !important;
+        margin-top: 20px;
     }
     
     .explore-text {

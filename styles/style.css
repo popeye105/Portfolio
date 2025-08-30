@@ -954,6 +954,10 @@ h2 {
         letter-spacing: 3px;
     }
     
+    .typing-container {
+        margin-left: 20px !important;
+    }
+    
     .profile-image {
         max-width: 90vw;
         aspect-ratio: 1;

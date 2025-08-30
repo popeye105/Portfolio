@@ -795,18 +795,21 @@ h2 {
         display: flex !important;
         align-items: center !important;
         width: 100% !important;
+        margin-top: -10px;
     }
     
     .bio-description {
         text-align: center !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        margin-top: -15px;
     }
     
     .portfolio-button-container {
         align-items: center !important;
         text-align: center !important;
         margin-left: 0 !important;
+        margin-top: 10px;
     }
     
     .explore-text {

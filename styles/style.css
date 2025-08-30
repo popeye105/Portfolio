@@ -790,10 +790,11 @@ h2 {
     
     .typing-container {
         justify-content: center !important;
-        margin-left: 10px !important;
+        margin-left: 0 !important;
         text-align: center !important;
         display: flex !important;
         align-items: center !important;
+        width: 100% !important;
     }
     
     .bio-description {

@@ -665,7 +665,7 @@ h2 {
     }
 
     .profile-image {
-        max-width: calc(97vw + 20px);
+        max-width: calc(97vw + 40px);
         margin: 0 auto 5px auto;
         aspect-ratio: 1;
         height: auto;
@@ -785,7 +785,7 @@ h2 {
     .name-heading {
         text-align: center !important;
         margin-left: 0 !important;
-        margin-top: 38px;
+        margin-top: 36px;
         font-size: 1.8rem !important;
     }
     
@@ -967,7 +967,7 @@ h2 {
     }
     
     .profile-image {
-        max-width: calc(99vw + 20px);
+        max-width: calc(99vw + 40px);
         aspect-ratio: 1;
         height: auto;
         padding: 0px;

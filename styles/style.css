@@ -964,6 +964,7 @@ h2 {
     
     .profile-image {
         max-width: 90vw;
+        margin: 30px auto 0 auto;
         aspect-ratio: 1;
         height: auto;
         padding: 5px;

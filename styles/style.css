@@ -750,12 +750,6 @@ h2 {
     .footer-content p {
         margin: 10px 0;
     }
-    
-    .section:not(:last-child):not(#connect)::after {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-    }
 }
 
     .section {

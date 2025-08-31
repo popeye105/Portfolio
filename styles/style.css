@@ -413,6 +413,10 @@ h2 {
 }
 
 /* Education Section */
+#education {
+    padding: 30px 30px 50px 30px;
+}
+
 .education-card-new {
     background: #2d2d2d;
     padding: 24px;
@@ -442,6 +446,10 @@ h2 {
 }
 
 /* Experience Section */
+#experience {
+    padding: 30px 30px 50px 30px;
+}
+
 .experience-card-new {
     background: #2d2d2d;
     padding: 24px;

@@ -246,6 +246,42 @@ nav a:hover {
     -webkit-font-smoothing: auto !important;
 }
 
+@media (max-width: 768px) {
+    .name-heading {
+        text-align: center !important;
+        transform: translateX(0) translateY(15px) !important;
+        margin-left: 0 !important;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .footer-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    
+    .footer-left, .footer-center, .footer-right {
+        margin: 0 !important;
+        text-align: center !important;
+    }
+    
+    .contact-items {
+        gap: 10px !important;
+        justify-content: center !important;
+    }
+    
+    .contact-item {
+        margin: 0 !important;
+    }
+    
+    .contact-item:nth-child(2) {
+        margin-left: 0 !important;
+    }
+}
+
 .profile-image {
     width: 100%;
     max-width: 450px;

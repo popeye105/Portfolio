@@ -283,6 +283,14 @@ nav a:hover {
         justify-content: center !important;
     }
     
+    .footer-left .ssh-header {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
     .footer-center {
         order: 2 !important;
         margin-bottom: 15px !important;

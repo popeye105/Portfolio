@@ -264,7 +264,7 @@ nav a:hover {
         align-items: center !important;
         justify-content: center !important;
         gap: 0 !important;
-        padding: 15px !important;
+        padding: 10px !important;
         text-align: center !important;
         min-height: auto !important;
     }
@@ -278,7 +278,7 @@ nav a:hover {
     .footer-left {
         font-size: 1rem !important;
         order: 1 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 15px !important;
         display: flex !important;
         justify-content: center !important;
     }
@@ -289,11 +289,13 @@ nav a:hover {
         text-align: center !important;
         width: 100% !important;
         display: block !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
     }
     
     .footer-center {
         order: 2 !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 10px !important;
     }
     
     .footer-right {
@@ -314,7 +316,7 @@ nav a:hover {
     }
     
     .contact-item:nth-child(1) {
-        margin-bottom: 10px !important;
+        margin-bottom: 8px !important;
     }
     
     .contact-item:nth-child(2) {

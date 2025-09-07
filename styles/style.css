@@ -205,7 +205,7 @@ nav a:hover {
     margin-top: -5px;
     margin-bottom: 30px;
     color: #ffffff !important;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600 !important;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -258,27 +258,61 @@ nav a:hover {
     }
     
     .footer-content {
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
-        gap: 15px !important;
+        justify-content: space-between !important;
+        gap: 5px !important;
+        padding: 10px 15px !important;
     }
     
     .footer-left, .footer-center, .footer-right {
         margin: 0 !important;
         text-align: center !important;
+        flex: 1 !important;
+    }
+    
+    .footer-left {
+        font-size: 0.8rem !important;
     }
     
     .contact-items {
-        gap: 10px !important;
+        gap: 5px !important;
         justify-content: center !important;
+        flex-direction: row !important;
     }
     
     .contact-item {
         margin: 0 !important;
+        font-size: 0.7rem !important;
     }
     
     .contact-item:nth-child(2) {
         margin-left: 0 !important;
+    }
+    
+    .contact-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .contact-icon i {
+        font-size: 0.7rem !important;
+    }
+    
+    .contact-text {
+        font-size: 0.6rem !important;
+    }
+    
+    .status-section {
+        gap: 3px !important;
+    }
+    
+    .status-text {
+        font-size: 0.7rem !important;
+    }
+    
+    .last-active {
+        font-size: 0.6rem !important;
     }
 }
 

@@ -339,6 +339,10 @@ nav a:hover {
     
     .contact-text {
         font-size: 0.7rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
     }
     
     .status-section {

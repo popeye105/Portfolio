@@ -331,7 +331,7 @@ nav a:hover {
     .contact-icon {
         width: 24px !important;
         height: 24px !important;
-        transform: translateY(-5px) !important;
+        transform: translateY(-15px) !important;
     }
     
     .contact-icon i {

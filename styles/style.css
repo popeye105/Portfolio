@@ -80,7 +80,7 @@ body {
     position: relative;
     z-index: 1;
     background: none;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 nav {
@@ -184,6 +184,7 @@ nav a:hover {
     position: relative;
 }
 
+
 .section:not(:last-child):not(#connect)::after {
     content: '';
     position: absolute;
@@ -261,7 +262,7 @@ nav a:hover {
     .footer-content {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 15px !important;
+        gap: 0 !important;
         padding: 20px 15px !important;
     }
     
@@ -273,27 +274,33 @@ nav a:hover {
     
     .footer-left {
         font-size: 0.9rem !important;
-        order: 3 !important;
+        order: 1 !important;
+        margin-bottom: 40px !important;
     }
     
     .footer-center {
-        order: 1 !important;
-    }
-    
-    .footer-right {
         order: 2 !important;
     }
     
+    .footer-right {
+        order: 3 !important;
+        margin-top: 30px !important;
+    }
+    
     .contact-items {
-        gap: 15px !important;
+        gap: 0 !important;
         justify-content: center !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     
     .contact-item {
         margin: 0 !important;
         font-size: 0.8rem !important;
+    }
+    
+    .contact-item:nth-child(1) {
+        margin-bottom: 20px !important;
     }
     
     .contact-item:nth-child(2) {
@@ -841,7 +848,7 @@ nav a:hover {
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
-        padding-top: 60px;
+        padding-top: 70px;
     }
     
     nav {

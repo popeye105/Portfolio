@@ -1,29 +1,40 @@
 
-// My skills and tech stack
-const skills = [
-    { name: 'MYSQL', image: 'TS Logo/MYSQL.png' },
-    { name: 'DOCKER', image: 'TS Logo/DOCKER.png' },
-    { name: 'PYTHON', image: 'TS Logo/PYTHON.png' },
-    { name: 'MONGODB', image: 'TS Logo/MONGODB.png' },
-    { name: 'HTML', image: 'TS Logo/HTML5.png' },
-    { name: 'CSS', image: 'TS Logo/CSS3.png' },
-    { name: 'JS', image: 'TS Logo/JAVASCRIPT.png' },
-    { name: 'JAVA', image: 'TS Logo/JAVA.png' },
-    { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
-    { name: 'SKLEARN', image: 'TS Logo/SKLEARN.png' },
-];
-
+// Categorized tech stack
+const techStack = {
+    'programming-languages': [
+        { name: 'PYTHON', image: 'TS Logo/PYTHON.png' },
+        { name: 'JAVA', image: 'TS Logo/JAVA.png' },
+        { name: 'JAVASCRIPT', image: 'TS Logo/JAVASCRIPT.png' }
+    ],
+    'web-development': [
+        { name: 'HTML5', image: 'TS Logo/HTML5.png' },
+        { name: 'CSS3', image: 'TS Logo/CSS3.png' }
+    ],
+    'databases-tools': [
+        { name: 'MYSQL', image: 'TS Logo/MYSQL.png' },
+        { name: 'MONGODB', image: 'TS Logo/MONGODB.png' },
+        { name: 'SKLEARN', image: 'TS Logo/SKLEARN.png' }
+    ],
+    'dev-tools': [
+        { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
+        { name: 'DOCKER', image: 'TS Logo/DOCKER.png' }
+    ]
+};
 
 function populateSkills() {
-    const skillsGrid = document.querySelector('.skills-grid');
-    skills.forEach(skill => {
-        const skillItem = document.createElement('div');
-        skillItem.className = 'skill-item';
-        skillItem.innerHTML = `
-            <img src="${skill.image}" alt="${skill.name}" class="skill-logo red-border">
-            <p>${skill.name}</p>
-        `;
-        skillsGrid.appendChild(skillItem);
+    Object.keys(techStack).forEach(categoryId => {
+        const categoryGrid = document.getElementById(categoryId);
+        if (categoryGrid) {
+            techStack[categoryId].forEach(skill => {
+                const skillItem = document.createElement('div');
+                skillItem.className = 'skill-item';
+                skillItem.innerHTML = `
+                    <img src="${skill.image}" alt="${skill.name}" class="skill-logo red-border">
+                    <p>${skill.name}</p>
+                `;
+                categoryGrid.appendChild(skillItem);
+            });
+        }
     });
 }
 
@@ -108,10 +119,26 @@ function openEmail(event) {
     }
 }
 
+// Online status functionality
+function initOnlineStatus() {
+    const updateStatus = () => {
+        const isOnline = navigator.onLine;
+        const now = new Date();
+        document.querySelector('.status-dot').className = `status-dot ${isOnline ? 'online' : 'offline'}`;
+        document.querySelector('.status-text').textContent = isOnline ? 'ONLINE' : 'OFFLINE';
+        document.getElementById('last-active-time').textContent = `LAST ACTIVE: ${now.toLocaleDateString()}`;
+    };
+    
+    updateStatus();
+    ['online', 'offline'].forEach(event => window.addEventListener(event, updateStatus));
+    setInterval(updateStatus, 60000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initVideoSequence();
     initTypingAnimation();
     populateSkills();
+    initOnlineStatus();
     
     document.querySelector('.resume-btn')?.addEventListener('click', () => {
         alert('Error: Not Uploaded Yet');

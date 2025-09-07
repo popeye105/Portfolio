@@ -251,6 +251,7 @@ nav a:hover {
         text-align: center !important;
         transform: translateX(0) translateY(15px) !important;
         margin-left: 0 !important;
+        color: #64ffda !important;
     }
     
     .section h2 {
@@ -258,32 +259,41 @@ nav a:hover {
     }
     
     .footer-content {
-        flex-direction: row !important;
+        flex-direction: column !important;
         align-items: center !important;
-        justify-content: space-between !important;
-        gap: 5px !important;
-        padding: 10px 15px !important;
+        gap: 15px !important;
+        padding: 20px 15px !important;
     }
     
     .footer-left, .footer-center, .footer-right {
         margin: 0 !important;
         text-align: center !important;
-        flex: 1 !important;
+        width: 100% !important;
     }
     
     .footer-left {
-        font-size: 0.8rem !important;
+        font-size: 0.9rem !important;
+        order: 3 !important;
+    }
+    
+    .footer-center {
+        order: 1 !important;
+    }
+    
+    .footer-right {
+        order: 2 !important;
     }
     
     .contact-items {
-        gap: 5px !important;
+        gap: 15px !important;
         justify-content: center !important;
         flex-direction: row !important;
+        flex-wrap: wrap !important;
     }
     
     .contact-item {
         margin: 0 !important;
-        font-size: 0.7rem !important;
+        font-size: 0.8rem !important;
     }
     
     .contact-item:nth-child(2) {
@@ -291,28 +301,28 @@ nav a:hover {
     }
     
     .contact-icon {
-        width: 20px !important;
-        height: 20px !important;
+        width: 24px !important;
+        height: 24px !important;
     }
     
     .contact-icon i {
-        font-size: 0.7rem !important;
+        font-size: 0.8rem !important;
     }
     
     .contact-text {
-        font-size: 0.6rem !important;
-    }
-    
-    .status-section {
-        gap: 3px !important;
-    }
-    
-    .status-text {
         font-size: 0.7rem !important;
     }
     
+    .status-section {
+        gap: 5px !important;
+    }
+    
+    .status-text {
+        font-size: 0.8rem !important;
+    }
+    
     .last-active {
-        font-size: 0.6rem !important;
+        font-size: 0.7rem !important;
     }
 }
 

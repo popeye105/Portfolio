@@ -242,7 +242,7 @@ nav a:hover {
     font-family: 'Inter', sans-serif !important;
     text-align: left;
     margin-left: 0;
-    transform: translateX(-96px) translateY(15px);
+    transform: translateX(-121px) translateY(15px);
     -webkit-font-smoothing: auto !important;
 }
 
@@ -251,7 +251,7 @@ nav a:hover {
         text-align: center !important;
         transform: translateX(0) translateY(15px) !important;
         margin-left: 0 !important;
-        color: #64ffda !important;
+        color: #ffffff !important;
     }
     
     .section h2 {
@@ -446,9 +446,7 @@ nav a:hover {
 }
 
 /* Tech Stack Categories */
-#skills {
-    padding: 40px 30px;
-}
+
 
 .tech-categories-container {
     display: grid;
@@ -1049,6 +1047,7 @@ nav a:hover {
         margin-left: 0 !important;
         margin-top: 29px;
         font-size: 1.6rem !important;
+        color: #ffffff !important;
     }
     
     .typing-container {

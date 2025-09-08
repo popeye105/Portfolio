@@ -938,7 +938,7 @@ nav a:hover {
     }
 
     .profile-image {
-        max-width: calc(97vw + 40px);
+        max-width: 60vw;
         margin: 0 auto 5px auto;
         aspect-ratio: 1;
         height: auto;
@@ -1258,7 +1258,7 @@ nav a:hover {
     }
     
     .profile-image {
-        max-width: calc(99vw + 40px);
+        max-width: 55vw;
         aspect-ratio: 1;
         height: auto;
         padding: 0px;

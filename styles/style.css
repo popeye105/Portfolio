@@ -80,7 +80,7 @@ body {
     position: relative;
     z-index: 1;
     background: none;
-    padding-top: 70px;
+    padding-top: 90px;
 }
 
 nav {
@@ -214,8 +214,8 @@ nav a:hover {
 
 .about-content {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 50px;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
     align-items: center;
     align-items: center;
 }
@@ -235,15 +235,15 @@ nav a:hover {
 }
 
 .name-heading {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
     color: var(--accent-color);
     font-weight: 600 !important;
     font-family: 'Inter', sans-serif !important;
     text-align: left;
     margin-left: 0;
-    transform: translateX(-121px) translateY(15px);
+    transform: translateX(-150px) translateY(25px);
     -webkit-font-smoothing: auto !important;
 }
 
@@ -360,13 +360,13 @@ nav a:hover {
 
 .profile-image {
     width: 100%;
-    max-width: 450px;
-    height: 400px;
+    max-width: 380px;
+    height: 350px;
     overflow: hidden;
     border-radius: 25px;
-    padding: 20px;
+    padding: 15px;
     position: relative;
-    margin-left: 50px;
+    margin-left: 40px;
     display: flex;
     align-items: center;
 }
@@ -379,7 +379,7 @@ nav a:hover {
 }
 
 .bio {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #ffffff;
     font-weight: 600;
     text-align: left;
@@ -388,15 +388,15 @@ nav a:hover {
 }
 
 .typing-container {
-    font-size: 1.3rem;
-    margin: 15px 0;
-    min-height: 40px;
+    font-size: 1.25rem;
+    margin: 8px 0;
+    min-height: 35px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 45px;
+    margin-left: 60px;
     width: fit-content;
-    transform: translateY(-25px);
+    transform: translateY(-15px);
 }
 
 .typing-prefix {
@@ -422,21 +422,21 @@ nav a:hover {
 }
 
 .bio-description {
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: left;
-    margin-left: 45px;
-    margin-right: 45px;
+    margin-left: 60px;
+    margin-right: 60px;
     clear: both;
-    transform: translateY(-25px);
+    transform: translateY(-20px);
 }
 
 .portfolio-button-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 30px;
-    margin-left: 50px;
-    transform: translateY(-25px);
+    margin-top: 20px;
+    margin-left: 75px;
+    transform: translateY(-20px);
 }
 
 .explor.name-heading {

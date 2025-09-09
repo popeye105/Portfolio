@@ -54,10 +54,10 @@ body {
     z-index: -1;
     overflow: hidden;
     background: 
-        radial-gradient(circle at 20% 20%, #171f6a 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, #242d84 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, #31409d 0%, transparent 50%),
-        linear-gradient(135deg, #0b111c 0%, #1a2532 25%, #2a3648 50%, #1a2532 75%, #0b111c 100%);
+        radial-gradient(circle at 20% 20%, #141a5e 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, #1f2775 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, #2a3688 0%, transparent 50%),
+        linear-gradient(135deg, #090e18 0%, #16202b 25%, #243041 50%, #16202b 75%, #090e18 100%);
     background-size: 800px 800px, 600px 600px, 400px 400px, 100% 100%;
     animation: backgroundShift 20s ease infinite;
 }
@@ -65,15 +65,15 @@ body {
 #animated-background::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: -50px;
-    right: -50px;
-    bottom: -50px;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
     background-image: 
         linear-gradient(rgba(100, 255, 218, 0.18) 1px, transparent 1px),
         linear-gradient(90deg, rgba(100, 255, 218, 0.18) 1px, transparent 1px);
     background-size: 50px 50px;
-    animation: gridMove 20s linear infinite;
+    animation: gridMove 3s linear infinite;
     opacity: 0.8;
 }
 

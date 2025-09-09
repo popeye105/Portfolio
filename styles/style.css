@@ -918,12 +918,13 @@ nav a:hover {
 @media (max-width: 768px) {
     #animated-background {
         background: 
-            radial-gradient(circle at 25% 25%, #1a2070 0%, transparent 45%),
-            radial-gradient(circle at 75% 75%, #253080 0%, transparent 45%),
-            radial-gradient(circle at 50% 80%, #304090 0%, transparent 45%),
+            radial-gradient(circle at 30% 30%, #1a2070 0%, transparent 40%),
+            radial-gradient(circle at 70% 70%, #253080 0%, transparent 40%),
             linear-gradient(135deg, #090e18 0%, #16202b 25%, #243041 50%, #16202b 75%, #090e18 100%);
-        background-size: 500px 500px, 400px 400px, 350px 350px, 100% 100%;
-        animation: backgroundShift 8s ease infinite;
+        background-size: 400px 400px, 350px 350px, 100% 100%;
+        animation: backgroundShift 10s ease infinite;
+        will-change: background-position;
+        transform: translateZ(0);
     }
 
     .container {

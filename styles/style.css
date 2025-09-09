@@ -920,7 +920,7 @@ nav a:hover {
         background: 
             radial-gradient(circle at 25% 25%, #1a2070 0%, transparent 45%),
             radial-gradient(circle at 75% 75%, #253080 0%, transparent 45%),
-            linear-gradient(135deg, #0a0f1a 0%, #1a2530 25%, #2a3a50 50%, #1a2530 75%, #0a0f1a 100%);
+            linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #0a0a0a 100%);
         background-size: 450px 450px, 380px 380px, 100% 100%;
         animation: backgroundShift 14s linear infinite;
         will-change: background-position;

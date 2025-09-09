@@ -59,7 +59,7 @@ body {
         radial-gradient(circle at 40% 80%, #2a3688 0%, transparent 50%),
         linear-gradient(135deg, #090e18 0%, #16202b 25%, #243041 50%, #16202b 75%, #090e18 100%);
     background-size: 800px 800px, 600px 600px, 400px 400px, 100% 100%;
-    animation: backgroundShift 20s ease infinite;
+    animation: backgroundShift 12s ease infinite;
 }
 
 #animated-background::before {
@@ -916,6 +916,16 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+    #animated-background {
+        background: 
+            radial-gradient(circle at 20% 20%, #141a5e 0%, transparent 40%),
+            radial-gradient(circle at 80% 80%, #1f2775 0%, transparent 40%),
+            radial-gradient(circle at 40% 80%, #2a3688 0%, transparent 40%),
+            linear-gradient(135deg, #090e18 0%, #16202b 25%, #243041 50%, #16202b 75%, #090e18 100%);
+        background-size: 400px 400px, 300px 300px, 250px 250px, 100% 100%;
+        animation: backgroundShift 10s ease infinite;
+    }
+
     .container {
         padding: 0 15px;
         padding-top: 70px;

@@ -223,7 +223,7 @@ nav a:hover {
 .section {
     padding: 40px 30px;
     margin: 20px 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(1px);
     position: relative;
@@ -918,12 +918,12 @@ nav a:hover {
 @media (max-width: 768px) {
     #animated-background {
         background: 
-            radial-gradient(circle at 20% 20%, #141a5e 0%, transparent 40%),
-            radial-gradient(circle at 80% 80%, #1f2775 0%, transparent 40%),
-            radial-gradient(circle at 40% 80%, #2a3688 0%, transparent 40%),
+            radial-gradient(circle at 25% 25%, #141a5e 0%, transparent 45%),
+            radial-gradient(circle at 75% 75%, #1f2775 0%, transparent 45%),
+            radial-gradient(circle at 50% 80%, #2a3688 0%, transparent 45%),
             linear-gradient(135deg, #090e18 0%, #16202b 25%, #243041 50%, #16202b 75%, #090e18 100%);
-        background-size: 400px 400px, 300px 300px, 250px 250px, 100% 100%;
-        animation: backgroundShift 10s ease infinite;
+        background-size: 500px 500px, 400px 400px, 350px 350px, 100% 100%;
+        animation: backgroundShift 12s ease infinite;
     }
 
     .container {

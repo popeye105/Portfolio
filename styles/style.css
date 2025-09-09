@@ -917,11 +917,8 @@ nav a:hover {
 
 @media (max-width: 768px) {
     #animated-background {
-        background: 
-            radial-gradient(circle at 30% 30%, #253080 0%, transparent 45%),
-            linear-gradient(135deg, #0a0e15 0%, #1a2530 25%, #304090 50%, #1a2530 75%, #0a0e15 100%);
-        background-size: 250px 250px, 100% 100%;
-        animation: backgroundShift 16s ease infinite;
+        background: linear-gradient(135deg, #0a0e15 0%, #1a2530 25%, #304090 50%, #1a2530 75%, #0a0e15 100%);
+        animation: none;
     }
 
     .container {

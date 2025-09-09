@@ -921,11 +921,13 @@ nav a:hover {
             radial-gradient(circle at 25% 25%, #1a2070 0%, transparent 45%),
             radial-gradient(circle at 75% 75%, #253080 0%, transparent 45%),
             linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #0a0a0a 100%);
-        background-size: 450px 450px, 380px 380px, 100% 100%;
-        animation: backgroundShift 14s linear infinite;
-        will-change: background-position;
-        transform: translateZ(0);
+        background-size: 350px 350px, 300px 300px, 100% 100%;
+        animation: backgroundShift 10s linear infinite;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
         backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
     }
 
     .container {

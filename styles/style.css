@@ -544,6 +544,11 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
+#education .tech-category {
+    padding: 15px;
+    min-height: auto;
+}
+
 .tech-category:hover {
     border-color: #64ffda;
     box-shadow: 0 6px 20px rgba(100, 255, 218, 0.2);
@@ -610,33 +615,69 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-.education-card-new {
-    background: #2d2d2d;
-    padding: 24px;
-    border-radius: 8px;
-    border: 2px solid #64ffda;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    max-width: 600px;
-    text-align: center;
-    transform: translateY(-5px);
+#education .tech-category {
+    text-align: center !important;
 }
 
-.education-card-new h3 {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #64ffda;
-    margin: 0 0 8px 0;
+.education-content {
+    padding: 5px;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.education-card-new p {
+.education-content p {
     color: white;
-    margin: 4px 0;
+    margin: 8px 0;
+    font-size: 0.95rem;
+    text-align: center !important;
+    width: 100%;
 }
 
-.education-card-new .year-text {
+.education-content .year-text {
+    color: #64ffda;
     font-size: 0.875rem;
-    margin-top: 8px;
+    margin-top: 12px;
+    font-weight: 500;
+    text-align: center !important;
+}
+
+.show-metrics-btn {
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    min-height: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    font-size: 0.85rem !important;
+    margin: 10px 0 !important;
+}
+
+.show-metrics-btn:hover {
+    background: rgba(100, 255, 218, 0.1) !important;
+    box-shadow: 0 0 10px var(--accent-color) !important;
+}
+
+.metrics-description {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
 }
 
 #experience {
@@ -1030,7 +1071,6 @@ nav a:hover {
     .education-card-new,
     .experience-card-new {
         padding: 25px 20px;
-        margin-bottom: 20px;
         max-width: 100%;
     }
     
@@ -1080,6 +1120,11 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .tech-categories-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .education-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }

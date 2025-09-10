@@ -142,6 +142,16 @@ function initOnlineStatus() {
     setInterval(updateStatus, 60000);
 }
 
+// Toggle metrics function for education section
+function toggleMetrics(metricsId) {
+    const metricsDiv = document.getElementById(metricsId);
+    if (metricsDiv.style.display === 'none' || metricsDiv.style.display === '') {
+        metricsDiv.style.display = 'block';
+    } else {
+        metricsDiv.style.display = 'none';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initVideoSequence();
     initTypingAnimation();

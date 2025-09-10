@@ -18,6 +18,14 @@ const techStack = {
     'dev-tools': [
         { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
         { name: 'DOCKER', image: 'TS Logo/DOCKER.png' }
+    ],
+    'cybersecurity-tools': [
+        { name: 'WIRESHARK', image: 'TS Logo/Wireshark.png' },
+        { name: 'AUTOPSY', image: 'TS Logo/Autopsy.png' }
+    ],
+    'frameworks-libraries': [
+        { name: 'SOCKET.IO', image: 'TS Logo/Socket.io.png' },
+        { name: 'REST API', image: 'TS Logo/Rest API.png' }
     ]
 };
 

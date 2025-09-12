@@ -6,26 +6,17 @@ const techStack = {
         { name: 'JAVA', image: 'TS Logo/JAVA.png' },
         { name: 'JAVASCRIPT', image: 'TS Logo/JAVASCRIPT.png' }
     ],
-    'web-development': [
+    'web-technologies': [
         { name: 'HTML5', image: 'TS Logo/HTML5.png' },
         { name: 'CSS3', image: 'TS Logo/CSS3.png' }
     ],
-    'databases-tools': [
+    'databases': [
         { name: 'MYSQL', image: 'TS Logo/MYSQL.png' },
-        { name: 'MONGODB', image: 'TS Logo/MONGODB.png' },
-        { name: 'SKLEARN', image: 'TS Logo/SKLEARN.png' }
+        { name: 'MONGODB', image: 'TS Logo/MONGODB.png' }
     ],
     'dev-tools': [
         { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
         { name: 'DOCKER', image: 'TS Logo/DOCKER.png' }
-    ],
-    'cybersecurity-tools': [
-        { name: 'WIRESHARK', image: 'TS Logo/Wireshark.png' },
-        { name: 'AUTOPSY', image: 'TS Logo/Autopsy.png' }
-    ],
-    'frameworks-libraries': [
-        { name: 'SOCKET.IO', image: 'TS Logo/Socket.io.png' },
-        { name: 'REST API', image: 'TS Logo/Rest API.png' }
     ]
 };
 

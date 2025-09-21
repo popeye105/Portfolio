@@ -285,7 +285,7 @@ nav a.active::after {
     font-family: 'Inter', sans-serif !important;
     text-align: left;
     margin-left: 0;
-    transform: translateX(-80px) translateY(25px);
+    transform: translateX(-150px) translateY(25px);
     -webkit-font-smoothing: auto !important;
 }
 

@@ -285,8 +285,14 @@ nav a.active::after {
     font-family: 'Inter', sans-serif !important;
     text-align: left;
     margin-left: 0;
-    transform: translateX(-150px) translateY(25px);
+    transform: translateX(-80px) translateY(25px);
     -webkit-font-smoothing: auto !important;
+}
+
+@media (max-width: 1024px) {
+    .name-heading {
+        transform: translateX(-40px) translateY(25px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1888,12 +1894,12 @@ nav a.active::after {
     }
     
     .form-input {
-        padding: 8px 35px 8px 10px;
-        font-size: 0.8rem;
+        padding: 12px 15px 12px 40px;
+        font-size: 0.9rem;
     }
     
     .form-icon {
-        right: 12px;
+        left: 12px;
         font-size: 0.9rem;
     }
     

@@ -1215,11 +1215,6 @@ nav a.active::after {
 }
 
 @media (max-width: 768px) {
-    #animated-background {
-        background: linear-gradient(135deg, #0a0e15 0%, #1a2530 25%, #304090 50%, #1a2530 75%, #0a0e15 100%);
-        animation: none;
-    }
-
     .container {
         padding: 0 15px;
         padding-top: 70px;

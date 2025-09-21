@@ -247,8 +247,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScrolling();
     initMobileNavigation();
     
-    document.querySelector('.resume-btn')?.addEventListener('click', () => {
-        alert('Error: Not Uploaded Yet');
-    });
+    // Simple form submission message
+    const form = document.querySelector('.contact-form');
+    if (form) {
+        form.addEventListener('submit', () => {
+            alert('Message sent successfully!');
+        });
+    }
 });
 
+document.querySelector('.resume-btn')?.addEventListener('click', () => {
+    alert('Error: Not Uploaded Yet');
+});

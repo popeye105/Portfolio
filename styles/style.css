@@ -285,7 +285,7 @@ nav a.active::after {
     font-family: 'Inter', sans-serif !important;
     text-align: left;
     margin-left: 0;
-    transform: translateX(-80px) translateY(25px);
+    transform: translateX(-150px) translateY(25px);
     -webkit-font-smoothing: auto !important;
 }
 
@@ -506,18 +506,19 @@ nav a.active::after {
     background: var(--accent-color);
     color: #000;
     padding: 12px 24px;
+    border: none;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
 }
 
 .portfolio-95-btn:hover {
     background: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.5);
 }
 
 /* Tech Stack Categories */
@@ -656,11 +657,19 @@ nav a.active::after {
     white-space: nowrap !important;
     font-size: 0.85rem !important;
     margin: 10px 0 !important;
+    transition: all 0.3s ease !important;
 }
 
 .show-metrics-btn:hover {
-    background: rgba(100, 255, 218, 0.1) !important;
-    box-shadow: 0 0 10px var(--accent-color) !important;
+    background: rgba(100, 255, 218, 0.25) !important;
+    transform: translateY(-1px) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Show Metrics button hover effect - more specific selector */
+button.show-metrics-btn[style*="transparent"]:hover {
+    background: rgba(100, 255, 218, 0.25) !important;
+    transform: translateY(-1px) !important;
 }
 
 .metrics-description {
@@ -917,8 +926,9 @@ nav a.active::after {
 }
 
 .form-button:hover {
+    background: #ffffff;
+    color: #000;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.4);
 }
 
 .form-button i {
@@ -1040,8 +1050,14 @@ nav a.active::after {
 }
 
 .view-certificate-btn:hover {
-    background: rgba(100, 255, 218, 0.1);
-    box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+    background: rgba(100, 255, 218, 0.25);
+    transform: translateY(-1px);
+}
+
+/* GitHub button hover effect */
+.view-certificate-btn[style*="transparent"]:hover {
+    background: rgba(100, 255, 218, 0.25) !important;
+    transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {

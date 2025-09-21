@@ -43,9 +43,9 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+    color: #ffffff;
 }
 
 #animated-background {
@@ -53,7 +53,7 @@ body {
     inset: 0;
     z-index: -1;
     overflow: hidden;
-    background: linear-gradient(135deg, #0a0e15 0%, #1a2530 25%, #304090 50%, #1a2530 75%, #0a0e15 100%);
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
 }
 
 #animated-background::before {
@@ -226,11 +226,9 @@ nav a.active::after {
 }
 
 .section {
-    padding: 40px 30px;
-    margin: 20px 0;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    backdrop-filter: blur(1px);
+    padding: 60px 30px;
+    margin: 40px 0;
+    background: transparent;
     position: relative;
 }
 

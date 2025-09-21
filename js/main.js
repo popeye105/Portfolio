@@ -143,11 +143,120 @@ function toggleMetrics(metricsId) {
     }
 }
 
+// View Certificate function
+function viewCertificate(certificateId) {
+    // Certificate PDF file paths
+    const certificateUrls = {
+        'ibm-ai': 'Certificates/IBM Foundational AI.pdf',
+        'nvidia-nlp': 'Certificates/Nvidia Transformer-based NLP.pdf',
+        'tata-analytics': 'Certificates/Tata GenAI.pdf'
+    };
+    
+    const url = certificateUrls[certificateId];
+    
+    if (url) {
+        // Open PDF at 80% zoom
+        window.open(url + '#zoom=80&toolbar=0&navpanes=0', '_blank');
+    } else {
+        alert(`Certificate not found!`);
+    }
+}
+
+// Smooth scrolling and active navigation
+function initSmoothScrolling() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+    
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Active section detection on scroll
+    function updateActiveNavigation() {
+        const scrollPosition = window.scrollY + 150; // Increased offset for better detection
+        
+        let activeSection = 'about'; // Default to 'about' section
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 200; // Earlier detection
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop) {
+                activeSection = section.id;
+            }
+        });
+        
+        // Update active navigation link
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${activeSection}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Throttled scroll event listener for better performance
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(updateActiveNavigation, 10);
+    });
+    
+    // Initial call to set active navigation
+    updateActiveNavigation();
+}
+
+// Mobile menu smooth scrolling
+function closeMobileMenu() {
+    document.querySelector('.mobile-nav').classList.remove('active');
+    document.querySelector('.hamburger').innerHTML = '<span></span><span></span><span></span>';
+}
+
+// Update mobile menu links to use smooth scrolling
+function initMobileNavigation() {
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                closeMobileMenu();
+                setTimeout(() => {
+                    const offsetTop = targetSection.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }, 300); // Wait for mobile menu to close
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initVideoSequence();
     initTypingAnimation();
     populateSkills();
     initOnlineStatus();
+    initSmoothScrolling();
+    initMobileNavigation();
     
     document.querySelector('.resume-btn')?.addEventListener('click', () => {
         alert('Error: Not Uploaded Yet');

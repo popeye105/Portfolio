@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+</head><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,11 +25,12 @@
                 <img src="NB Logo.png" alt="Logo" class="logo-img">
             </div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#experience">Experience</a>
-                <a href="#connect">Connect</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
             <button class="resume-btn" type="button">Download Resume</button>
         </nav>
@@ -37,9 +38,10 @@
         <div class="mobile-nav">
             <a href="#about" onclick="closeMobileMenu()">About</a>
             <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+            <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+            <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
             <a href="#education" onclick="closeMobileMenu()">Education</a>
-            <a href="#experience" onclick="closeMobileMenu()">Experience</a>
-            <a href="#connect" onclick="closeMobileMenu()">Connect</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
         </div>
 
         <section id="about" class="section">
@@ -66,7 +68,7 @@
         </section>
 
         <section id="skills" class="section">
-            <h2>Tech Stack</h2>
+            <h2>Skills</h2>
             
             <div class="tech-categories-container">
                 <div class="tech-category">
@@ -89,6 +91,109 @@
                     <div class="category-grid" id="dev-tools"></div>
                 </div>
                 
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="tech-categories-container">
+                <div class="tech-category">
+                    <h3 class="category-title">MAIN PROJECT 1</h3>
+                    <div class="education-content" style="text-align: center;">
+                        <div class="project-image" style="margin: 15px auto; max-width: 220px; height: 140px; border-radius: 8px; overflow: hidden;">
+                            <img src="Projects%20img/project1.png" alt="Main Project 1" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'">
+                        </div>
+                        <p style="text-align: center; margin: 15px 0;">Coming Soon...</p>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="category-title">MAIN PROJECT 2</h3>
+                    <div class="education-content" style="text-align: center;">
+                        <div class="project-image" style="margin: 15px auto; max-width: 220px; height: 140px; border-radius: 8px; overflow: hidden;">
+                            <img src="Projects%20img/project2.png" alt="Main Project 2" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'">
+                        </div>
+                        <p style="text-align: center; margin: 15px 0;">Coming Soon...</p>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="category-title">COOK IT</h3>
+                    <div class="education-content" style="text-align: center;">
+                        <div class="project-image" style="margin: 15px auto; max-width: 220px; height: 120px; border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.05);">
+                            <img src="Projects%20img/Cook%20it.png" alt="Cook It Project" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;">
+                        </div>
+                        <p style="text-align: center; margin: 5px 0; color: #d1d5db; font-size: 0.9rem;">A comprehensive cooking platform for recipe discovery, meal planning, and kitchen management.</p>
+                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+                            <button class="view-certificate-btn" style="background: transparent; border: 1px solid #64ffda; color: #64ffda; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem;">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                            <button class="view-certificate-btn" style="background: #64ffda; color: #000; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; border: none;">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="category-title">OLD PORTFOLIO</h3>
+                    <div class="education-content" style="text-align: center;">
+                        <div class="project-image" style="margin: 15px auto; max-width: 220px; height: 120px; border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.05);">
+                            <img src="Projects%20img/Old%20Portfolio.png" alt="Old Portfolio Project" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;">
+                        </div>
+                        <p style="text-align: center; margin: 5px 0; color: #d1d5db; font-size: 0.9rem;">Classic retro desktop experience with taskbar and embedded applications. Features games, music player, resume viewer and contact form.</p>
+                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+                            <button class="view-certificate-btn" style="background: transparent; border: 1px solid #64ffda; color: #64ffda; padding: 6px 12px; border-radius: 4px; cursor: default; font-size: 0.85rem;">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                            <button class="view-certificate-btn" style="background: #64ffda; color: #000; padding: 6px 12px; border-radius: 4px; cursor: default; font-size: 0.85rem; border: none;">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <div class="certifications-container">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Getting Started with Artificial Intelligence</h3>
+                        <p class="certification-issuer">IBM</p>
+                        <p class="certification-description">
+                            Foundational AI concepts, generative AI technologies, and prompt engineering.
+                        </p>
+                        <button class="view-certificate-btn" onclick="viewCertificate('ibm-ai')">View Certificate</button>
+                    </div>
+
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Introduction to Transformer-Based Natural Language Processing</h3>
+                        <p class="certification-issuer">NVIDIA</p>
+                        <p class="certification-description">
+                            Transformer models and their applications in natural language processing.
+                        </p>
+                        <button class="view-certificate-btn" onclick="viewCertificate('nvidia-nlp')">View Certificate</button>
+                    </div>
+
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Gen-AI Data Analytics Job Simulation</h3>
+                        <p class="certification-issuer">TATA</p>
+                        <p class="certification-description">
+                            GenAI-powered analytics, data analysis, and financial services applications.
+                        </p>
+                        <button class="view-certificate-btn" onclick="viewCertificate('tata-analytics')">View Certificate</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -127,14 +232,7 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="experience-card-new">
-                <p>Will be updated soon...</p>
-            </div>
-        </section>
-
-        <section id="connect" class="section">
+        <section id="contact" class="section">
             <h2>Let's Connect</h2>
             <div class="connect-cards">
                 <a href="https://www.linkedin.com/in/mohd-arbab-rizvi-3217b9366?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="connect-card-link">

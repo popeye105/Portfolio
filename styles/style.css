@@ -53,13 +53,7 @@ body {
     inset: 0;
     z-index: -1;
     overflow: hidden;
-    background: 
-        radial-gradient(circle at 20% 20%, #1a2070 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, #253080 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, #304090 0%, transparent 50%),
-        linear-gradient(135deg, #090e18 0%, #16202b 25%, #243041 50%, #16202b 75%, #090e18 100%);
-    background-size: 800px 800px, 600px 600px, 400px 400px, 100% 100%;
-    animation: backgroundShift 12s ease infinite;
+    background: linear-gradient(135deg, #0a0e15 0%, #1a2530 25%, #304090 50%, #1a2530 75%, #0a0e15 100%);
 }
 
 #animated-background::before {
@@ -70,24 +64,24 @@ body {
     right: -100px;
     bottom: -100px;
     background-image: 
-        linear-gradient(rgba(100, 255, 218, 0.18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(100, 255, 218, 0.18) 1px, transparent 1px);
+        linear-gradient(rgba(100, 255, 218, 0.20) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 255, 218, 0.20) 1px, transparent 1px);
     background-size: 50px 50px;
-    animation: gridMove 3s linear infinite;
-    opacity: 0.8;
+    animation: gridMove 4.5s linear infinite;
+    opacity: 0.6;
 }
 
 @keyframes gridMove {
     0% { 
         transform: translate(0px, 0px); 
-        opacity: 0.8;
+        opacity: 0.6;
     }
     50% { 
-        opacity: 1;
+        opacity: 0.8;
     }
     100% { 
         transform: translate(50px, 50px); 
-        opacity: 0.8;
+        opacity: 0.6;
     }
 }
 
@@ -183,20 +177,31 @@ nav a {
     position: relative;
 }
 
-nav a:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 15px;
-    background: #4a4a4a;
-    z-index: 1;
-}
+/* Removed grey separators between nav links */
 
 nav a:hover {
     color: var(--accent-color);
+}
+
+/* Active navigation link styling - v2 */
+nav a.active {
+    color: var(--accent-color) !important;
+    position: relative;
+}
+
+nav a.active::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -3px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 30px !important;
+    height: 2px !important;
+    background: #64ffda !important;
+    border-radius: 1px !important;
+    box-shadow: 0 0 8px rgba(100, 255, 218, 0.6) !important;
+    z-index: 9999 !important;
+    display: block !important;
 }
 
 .resume-btn {
@@ -230,17 +235,11 @@ nav a:hover {
 }
 
 
-.section:not(:last-child):not(#connect)::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 5px;
-    background: rgba(100, 255, 218, 0.8);
-    border-radius: 2px;
+.section:not(#about) {
+    margin: 120px 0 !important;
 }
+
+
 
 .section:first-of-type {
     margin-top: 10px;
@@ -409,7 +408,7 @@ nav a:hover {
     height: 350px;
     overflow: hidden;
     border-radius: 25px;
-    padding: 15px;
+    padding: 16px;
     position: relative;
     margin-left: 60px;
     display: flex;
@@ -736,24 +735,19 @@ nav a:hover {
     background: #2d2d2d;
     border-radius: 16px;
     overflow: hidden;
+    border: 2px solid transparent;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     cursor:pointer;
 }
 
 .connect-card:hover {
-    transform: scale(1.1);
+    border-color: #64ffda;
+    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.2);
 }
 
 .card-border-animation {
-    position: absolute;
-    width: 100px;
-    height: 130%;
-    background: linear-gradient(to bottom, #64ffda, #ffffff);
-    animation: spin 3s linear infinite;
-    top: -15%;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
 }
 
 @keyframes spin {
@@ -798,6 +792,123 @@ nav a:hover {
     color: #d1d5db;
     font-size: 0.875rem;
     margin: 4px 0 0 0;
+}
+
+/* Certifications Section */
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.certification-card {
+    background: rgba(45, 45, 45, 0.8);
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.certification-card:hover {
+    border-color: #64ffda;
+    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.2);
+}
+
+.certification-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(100, 255, 218, 0.1);
+    border: 2px solid #64ffda;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.certification-icon i {
+    color: #64ffda;
+    font-size: 1.5rem;
+}
+
+.certification-card h3 {
+    color: #64ffda;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.certification-issuer {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 2px 0;
+}
+
+.certification-date {
+    color: #64ffda;
+    font-size: 0.9rem;
+    margin: 5px 0 15px 0;
+    font-weight: 500;
+}
+
+.certification-description {
+    color: #d1d5db;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.certification-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* View Certificate Button Styling */
+.view-certificate-btn {
+    background: transparent;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.view-certificate-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+}
+
+@media (max-width: 768px) {
+    .certifications-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .certification-card {
+        padding: 15px;
+    }
 }
 
 /* Simple Footer Style */
@@ -1384,7 +1495,7 @@ nav a:hover {
     }
     
     .tech-category {
-        padding: 15px;
+        padding: 20px;
         margin-bottom: 20px;
     }
     
@@ -1407,5 +1518,171 @@ nav a:hover {
     .education-card-new,
     .experience-card-new {
         padding: 20px 15px;
+    }
+}
+
+/* Empty Section Styles */
+.empty-section {
+    background: rgba(45, 45, 45, 0.8);
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 40px 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.empty-section p {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Projects Section Styles */
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(45, 45, 45, 0.8);
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #64ffda;
+    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-header h3 {
+    color: #64ffda;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.project-link {
+    background: transparent;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.project-link:hover {
+    background: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.project-description {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+
+/* Mobile Responsive for New Sections */
+@media (max-width: 768px) {
+    .projects-container {
+        gap: 20px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .project-header h3 {
+        font-size: 1.1rem;
+        min-width: auto;
+    }
+    
+    .project-links {
+        align-self: stretch;
+        justify-content: flex-start;
+    }
+    
+    .certifications-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .certification-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card,
+    .certification-card {
+        padding: 15px;
+    }
+    
+    .project-header h3 {
+        font-size: 1rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .project-link {
+        text-align: center;
+        padding: 8px 12px;
     }
 }

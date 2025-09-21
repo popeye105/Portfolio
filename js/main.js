@@ -118,19 +118,9 @@ function openEmail(event) {
     }
 }
 
-// Online status functionality
-function initOnlineStatus() {
-    const updateStatus = () => {
-        const isOnline = navigator.onLine;
-        const now = new Date();
-        document.querySelector('.status-dot').className = `status-dot ${isOnline ? 'online' : 'offline'}`;
-        document.querySelector('.status-text').textContent = isOnline ? 'ONLINE' : 'OFFLINE';
-        document.getElementById('last-active-time').textContent = `LAST ACTIVE: ${now.toLocaleDateString()}`;
-    };
-    
-    updateStatus();
-    ['online', 'offline'].forEach(event => window.addEventListener(event, updateStatus));
-    setInterval(updateStatus, 60000);
+// Blog button functionality
+function showBlogMessage() {
+    alert('Blog coming soon! I\'m currently working on some exciting articles about web development and AI. Stay tuned!');
 }
 
 // Toggle metrics function for education section
@@ -254,7 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoSequence();
     initTypingAnimation();
     populateSkills();
-    initOnlineStatus();
     initSmoothScrolling();
     initMobileNavigation();
     

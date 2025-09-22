@@ -94,6 +94,7 @@ body {
     }
 }
 
+
 #intro-video, #loop-video {
     position: fixed;
     top: 0;
@@ -518,7 +519,6 @@ nav a.active::after {
 
 .portfolio-95-btn:hover {
     background: #ffffff;
-    transform: translateY(-2px);
 }
 
 /* Tech Stack Categories */
@@ -662,14 +662,12 @@ nav a.active::after {
 
 .show-metrics-btn:hover {
     background: rgba(100, 255, 218, 0.25) !important;
-    transform: translateY(-1px) !important;
     transition: all 0.3s ease !important;
 }
 
 /* Show Metrics button hover effect - more specific selector */
 button.show-metrics-btn[style*="transparent"]:hover {
     background: rgba(100, 255, 218, 0.25) !important;
-    transform: translateY(-1px) !important;
 }
 
 .metrics-description {
@@ -1053,13 +1051,11 @@ button.show-metrics-btn[style*="transparent"]:hover {
 
 .view-certificate-btn:hover {
     background: rgba(100, 255, 218, 0.25);
-    transform: translateY(-1px);
 }
 
 /* GitHub button hover effect */
 .view-certificate-btn[style*="transparent"]:hover {
     background: rgba(100, 255, 218, 0.25) !important;
-    transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {

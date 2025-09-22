@@ -16,7 +16,8 @@ const techStack = {
     ],
     'dev-tools': [
         { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
-        { name: 'DOCKER', image: 'TS Logo/DOCKER.png' }
+        { name: 'DOCKER', image: 'TS Logo/DOCKER.png' },
+        { name: 'GITLAB', image: 'TS Logo/GITLAB.png' }
     ]
 };
 
@@ -37,7 +38,16 @@ function populateSkills() {
     });
 }
 
-
+// Scroll to section function for hero button
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
 
 function initVideoSequence() {
     const video = document.getElementById('background-video');

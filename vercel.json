@@ -1,7 +1,7 @@
 {
-  "buildCommand": "echo 'Static site ready'",
-  "outputDirectory": ".",
-  "public": true,
+  "functions": {},
+  "rewrites": [],
+  "redirects": [],
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [

@@ -377,29 +377,29 @@
             offset: 50
         });
         
-        // Keep video visible on Vercel
-        document.addEventListener('DOMContentLoaded', function() {
+        // Keep video visible - aggressive approach
+        function forceVideoVisible() {
             const video = document.querySelector('video');
             if (video) {
-                // Force video to stay visible
-                video.style.display = 'block';
-                video.style.visibility = 'visible';
-                video.style.opacity = '1';
-                
-                // Prevent any scripts from hiding it
-                const observer = new MutationObserver(function(mutations) {
-                    mutations.forEach(function(mutation) {
-                        if (mutation.type === 'attributes' && 
-                            (mutation.attributeName === 'style' || 
-                             mutation.attributeName === 'class')) {
-                            video.style.display = 'block';
-                            video.style.visibility = 'visible';
-                        }
-                    });
-                });
-                observer.observe(video, { attributes: true });
+                video.style.setProperty('display', 'block', 'important');
+                video.style.setProperty('visibility', 'visible', 'important');
+                video.style.setProperty('opacity', '1', 'important');
+                video.play().catch(() => {});
             }
-        });
+        }
+        
+        // Run immediately and repeatedly
+        forceVideoVisible();
+        document.addEventListener('DOMContentLoaded', forceVideoVisible);
+        window.addEventListener('load', forceVideoVisible);
+        
+        // Keep checking every 500ms for first 10 seconds
+        let checkCount = 0;
+        const interval = setInterval(() => {
+            forceVideoVisible();
+            checkCount++;
+            if (checkCount >= 20) clearInterval(interval);
+        }, 500);
     </script>
 </body>
 </html>

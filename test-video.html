@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Test</title>
+</head>
+<body>
+    <h1>Video Test Page</h1>
+    
+    <h2>Test 1: Simple video tag</h2>
+    <video controls width="300">
+        <source src="blob-video.mp4" type="video/mp4">
+        Video not supported
+    </video>
+    
+    <h2>Test 2: Original path</h2>
+    <video controls width="300">
+        <source src="Blob%20prf/Blob%20v.mp4" type="video/mp4">
+        Video not supported
+    </video>
+    
+    <h2>Test 3: Direct link test</h2>
+    <p><a href="blob-video.mp4" target="_blank">Click to test blob-video.mp4</a></p>
+    <p><a href="Blob%20prf/Blob%20v.mp4" target="_blank">Click to test original video</a></p>
+    
+    <script>
+        // Test if files exist
+        fetch('blob-video.mp4')
+            .then(response => {
+                console.log('blob-video.mp4 status:', response.status);
+                if (response.ok) {
+                    console.log('✅ blob-video.mp4 is accessible');
+                } else {
+                    console.log('❌ blob-video.mp4 failed with status:', response.status);
+                }
+            })
+            .catch(error => console.log('❌ blob-video.mp4 error:', error));
+            
+        fetch('Blob%20prf/Blob%20v.mp4')
+            .then(response => {
+                console.log('Original video status:', response.status);
+                if (response.ok) {
+                    console.log('✅ Original video is accessible');
+                } else {
+                    console.log('❌ Original video failed with status:', response.status);
+                }
+            })
+            .catch(error => console.log('❌ Original video error:', error));
+    </script>
+</body>
+</html>

@@ -1,7 +1,4 @@
 {
-  "functions": {},
-  "rewrites": [],
-  "redirects": [],
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [

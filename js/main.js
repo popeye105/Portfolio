@@ -48,6 +48,7 @@ function scrollToSection(sectionId) {
     }
 }
 
+
 function initVideoSequence() {
     const video = document.getElementById('background-video');
     if (!video) return;
@@ -81,40 +82,6 @@ function closeMobileMenu() {
 }
 
 
-function initTypingAnimation() {
-    const typingText = document.getElementById('typing-text');
-    const phrases = ['Frontend Developer', 'Tech Enthusiast', 'Problem Solver'];
-    let currentPhrase = 0, currentChar = 0, isDeleting = false;
-    
-    function typeEffect() {
-        const current = phrases[currentPhrase];
-        
-        if (isDeleting) {
-            typingText.textContent = current.substring(0, currentChar);
-            currentChar--;
-        } else {
-            typingText.textContent = current.substring(0, currentChar);
-            currentChar++;
-        }
-        
-        let typeSpeed = isDeleting ? 50 : 100;
-        
-        if (!isDeleting && currentChar > current.length) {
-            typeSpeed = 2000; // Pause after complete word
-            isDeleting = true;
-            currentChar = current.length;
-        } else if (isDeleting && currentChar < 0) {
-            isDeleting = false;
-            currentPhrase = (currentPhrase + 1) % phrases.length;
-            currentChar = 0;
-            typeSpeed = 500; // Pause before new word
-        }
-        
-        setTimeout(typeEffect, typeSpeed);
-    }
-    
-    typeEffect();
-}
 
 function openEmail(event) {
     event.preventDefault();
@@ -163,18 +130,20 @@ function viewCertificate(certificateId) {
 
 // Smooth scrolling and active navigation
 function initSmoothScrolling() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.section');
+    // Handle navigation links and hero contact button
+    const navLinks = document.querySelectorAll('.nav-link, .hero-contact-btn');
     
-    // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
+            
+            const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
+                // Use same offset for both navigation and hero contact button
+                const offset = 70;
+                const offsetTop = targetSection.offsetTop - offset;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -183,11 +152,12 @@ function initSmoothScrolling() {
         });
     });
     
-    // Active section detection on scroll
+    // Update active navigation on scroll
     function updateActiveNavigation() {
         const scrollPosition = window.scrollY + 150; // Increased offset for better detection
         
         let activeSection = 'about'; // Default to 'about' section
+        const sections = document.querySelectorAll('.section');
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 200; // Earlier detection
             const sectionHeight = section.offsetHeight;
@@ -249,20 +219,11 @@ function initMobileNavigation() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    initVideoSequence();
-    initTypingAnimation();
+document.addEventListener('DOMContentLoaded', function() {
     populateSkills();
     initSmoothScrolling();
     initMobileNavigation();
-    
-    // Simple form submission message
-    const form = document.querySelector('.contact-form');
-    if (form) {
-        form.addEventListener('submit', () => {
-            alert('Message sent successfully!');
-        });
-    }
+    initVideoSequence();
 });
 
 document.querySelector('.resume-btn')?.addEventListener('click', () => {

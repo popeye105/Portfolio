@@ -385,8 +385,11 @@ nav a.active::after {
     backface-visibility: hidden;
     border: none;
     outline: none;
-    display: block;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0.8 !important;
     will-change: transform;
+    animation: none !important;
 }
 
 .hero-image img {

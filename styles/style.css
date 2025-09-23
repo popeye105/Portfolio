@@ -379,8 +379,8 @@ nav a.active::after {
     object-fit: cover;
     z-index: 2;
     clip-path: ellipse(40% 35% at 50% 40%);
-    mix-blend-mode: screen;
-    filter: invert(1) contrast(1.2) brightness(0.8);
+    mix-blend-mode: overlay;
+    filter: contrast(1.8) brightness(0.5) saturate(0) opacity(0.8);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border: none;

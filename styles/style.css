@@ -388,6 +388,15 @@ nav a.active::after {
     display: block;
 }
 
+/* Force video to always be visible on Vercel */
+video {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+
 /* Fallback for browsers that don't support mix-blend-mode properly */
 @supports not (mix-blend-mode: multiply) {
     .blob-video {

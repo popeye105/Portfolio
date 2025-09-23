@@ -51,9 +51,10 @@ body {
 #animated-background {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    pointer-events: none;
 }
 
 #animated-background::before {
@@ -64,11 +65,12 @@ body {
     right: -100px;
     bottom: -100px;
     background-image: 
-        linear-gradient(rgba(100, 255, 218, 0.20) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(100, 255, 218, 0.20) 1px, transparent 1px);
+        linear-gradient(rgba(100, 255, 218, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 255, 218, 0.5) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 4.5s linear infinite;
-    opacity: 0.6;
+    opacity: 1;
+    z-index: 1;
 }
 
 @keyframes gridMove {
@@ -118,7 +120,7 @@ body {
     padding: 0 20px;
     min-height: 100vh;
     position: relative;
-    z-index: 1;
+    z-index: 10;
     background: none;
     padding-top: 90px;
 }

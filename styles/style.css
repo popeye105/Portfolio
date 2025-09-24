@@ -507,9 +507,8 @@ video {
 
 .about-content {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 40px;
-    align-items: center;
+    grid-template-columns: 500px 1fr;
+    gap: 20px;
     align-items: center;
 }
 
@@ -660,7 +659,7 @@ video {
     border-radius: 25px;
     padding: 16px;
     position: relative;
-    margin-left: 60px;
+    margin-left: 150px;
     display: flex;
     align-items: center;
 }
@@ -684,14 +683,15 @@ video {
 .bio-description {
     margin-top: 25px;
     text-align: left;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 0px;
+    margin-right: 200px;
     clear: both;
     transform: translateY(0px);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
     color: #d1d5db;
+    margin-bottom: 20px;
 }
 
 

@@ -297,14 +297,14 @@ nav a.active::after {
 .hero-buttons {
     display: flex;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .hero-contact-btn {
     background: #00e6cc;
     color: #000;
     border: none;
-    padding: 14px 30px;
+    padding: 13px 30px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
@@ -317,7 +317,7 @@ nav a.active::after {
 }
 
 .hero-contact-btn:hover {
-    background: #ffffff;
+    background: #e8e8e8;
     box-shadow: 0 5px 15px rgba(0, 230, 204, 0.3);
 }
 
@@ -326,7 +326,7 @@ nav a.active::after {
     color: #00e6cc;
     text-decoration: none;
     border: 1px solid #00e6cc;
-    padding: 8px 22px;
+    padding: 8px 18px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
@@ -356,8 +356,8 @@ nav a.active::after {
 }
 
 .blob-background {
-    width: 320px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
     position: relative;
     overflow: hidden;
 }
@@ -365,7 +365,7 @@ nav a.active::after {
 .blob-background svg {
     width: 100%;
     height: 100%;
-    animation: blob-float 6s ease-in-out infinite;
+    animation: blob-float 5s ease-in-out infinite;
     z-index: 1;
 }
 
@@ -373,7 +373,7 @@ nav a.active::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.3);
+    transform: translate(-50%, -50%) scale(1.4);
     width: 55%;
     height: 55%;
     object-fit: cover;
@@ -417,7 +417,7 @@ video {
         transform: translateY(0px) rotate(0deg);
     }
     50% {
-        transform: translateY(-20px) rotate(5deg);
+        transform: translateY(-30px) rotate(5deg);
     }
 }
 
@@ -449,8 +449,8 @@ video {
     }
     
     .blob-background {
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
     }
     
     .hero-image {
@@ -1102,7 +1102,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 }
 
 .form-button:hover {
-    background-color: #ffffff;
+    background-color: #e8e8e8;
     color: #000;
     box-shadow: 0 4px 15px rgba(0, 230, 204, 0.3);
     transform: none !important;

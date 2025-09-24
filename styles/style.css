@@ -30,7 +30,7 @@ p, h1, h2, h3, h4, h5, h6, .bio {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 100px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     touch-action: manipulation;
@@ -466,27 +466,28 @@ video {
     position: relative;
 }
 
-
-.section:not(#about) {
+.section:not(#about-section) {
     margin: 120px 0 !important;
 }
 
 
 
 .section:first-of-type {
-    margin-top: 10px;
+    margin-top: -80px;
 }
 
 .section h2 {
     text-align: center;
     margin-top: -5px;
     margin-bottom: 40px;
+    transform: translateY(-5px);
     color: #ffffff !important;
     font-size: 2.2rem;
     font-weight: 600 !important;
     text-transform: capitalize;
     letter-spacing: 2px;
     position: relative;
+    scroll-margin-top: 100px !important;
 }
 
 .section h2::after {
@@ -721,8 +722,8 @@ video {
 }
 
 #education .tech-category {
-    padding: 15px;
-    min-height: auto;
+    padding: 25px 15px;
+    min-height: 180px;
 }
 
 .tech-category:hover {
@@ -783,20 +784,13 @@ video {
     margin: 0;
 }
 
-#education {
-    padding: 30px 30px 50px 30px;
-}
-
-#education h2 {
-    transform: translateY(-5px);
-}
 
 #education .tech-category {
     text-align: center !important;
 }
 
 .education-content {
-    padding: 5px;
+    padding: 20px 5px;
     text-align: center !important;
     display: flex;
     flex-direction: column;

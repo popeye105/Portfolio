@@ -163,7 +163,14 @@ function initSmoothScrolling() {
             const sectionHeight = section.offsetHeight;
             
             if (scrollPosition >= sectionTop) {
-                activeSection = section.id;
+                // Map section IDs to navigation links
+                if (section.id === 'skills-section') {
+                    activeSection = 'skills';
+                } else if (section.id === 'about-section') {
+                    activeSection = 'about';
+                } else {
+                    activeSection = section.id;
+                }
             }
         });
         

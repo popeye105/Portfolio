@@ -421,6 +421,15 @@ video {
     }
 }
 
+@keyframes blob-float-mobile {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
 /* Simple Mobile Optimization */
 @media (max-width: 768px) {
     /* Hero Section */
@@ -469,8 +478,7 @@ video {
     }
     
     .blob-background svg {
-        animation: blob-float 5s ease-in-out infinite;
-        transform: scale(1) translateY(15px);
+        animation: blob-float-mobile 5s ease-in-out infinite;
     }
     
     /* Navigation */
@@ -1905,8 +1913,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
     }
     
     .blob-background svg {
-        animation: blob-float 5s ease-in-out infinite;
-        transform: scale(1) translateY(15px);
+        animation: blob-float-mobile 5s ease-in-out infinite;
     }
     
     .profile-image {

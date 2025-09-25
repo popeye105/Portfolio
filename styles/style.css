@@ -466,7 +466,11 @@ video {
     .blob-background {
         width: 280px;
         height: 280px;
-        transform: translateY(50px);
+    }
+    
+    .blob-background svg {
+        animation: blob-float 5s ease-in-out infinite;
+        transform: scale(1) translateY(15px);
     }
     
     /* Navigation */
@@ -1898,7 +1902,11 @@ button.show-metrics-btn[style*="transparent"]:hover {
     .blob-background {
         width: 240px;
         height: 240px;
-        transform: translateY(50px);
+    }
+    
+    .blob-background svg {
+        animation: blob-float 5s ease-in-out infinite;
+        transform: scale(1) translateY(15px);
     }
     
     .profile-image {

@@ -2,21 +2,21 @@
 // Categorized tech stack
 const techStack = {
     'programming-languages': [
-        { name: 'PYTHON', image: 'TS Logo/PYTHON.jpg' },
-        { name: 'JAVA', image: 'TS Logo/JAVA.jpg' },
-        { name: 'JAVASCRIPT', image: 'TS Logo/JAVASCRIPT.jpg' }
+        { name: 'PYTHON', image: 'TS Logo/PYTHON.png' },
+        { name: 'JAVA', image: 'TS Logo/JAVA.png' },
+        { name: 'JAVASCRIPT', image: 'TS Logo/JAVASCRIPT.png' }
     ],
     'web-technologies': [
-        { name: 'HTML5', image: 'TS Logo/HTML5.jpg' },
-        { name: 'CSS3', image: 'TS Logo/CSS3.jpg' }
+        { name: 'HTML5', image: 'TS Logo/HTML5.png' },
+        { name: 'CSS3', image: 'TS Logo/CSS3.png' }
     ],
     'databases': [
-        { name: 'MYSQL', image: 'TS Logo/MYSQL.jpg' },
-        { name: 'MONGODB', image: 'TS Logo/MONGODB.jpg' }
+        { name: 'MYSQL', image: 'TS Logo/MYSQL.png' },
+        { name: 'MONGODB', image: 'TS Logo/MONGODB.png' }
     ],
     'dev-tools': [
-        { name: 'GITHUB', image: 'TS Logo/GITHUB.jpg' },
-        { name: 'DOCKER', image: 'TS Logo/DOCKER.jpg' }
+        { name: 'GITHUB', image: 'TS Logo/GITHUB.png' },
+        { name: 'DOCKER', image: 'TS Logo/DOCKER.png' }
     ]
 };
 

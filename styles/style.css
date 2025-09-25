@@ -759,7 +759,7 @@ video {
 .profile-image {
     width: 100%;
     max-width: 380px;
-    height: 350px;
+    height: 360px;
     overflow: hidden;
     border-radius: 25px;
     padding: 16px;

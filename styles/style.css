@@ -475,6 +475,7 @@ video {
     .blob-background {
         width: 280px;
         height: 280px;
+        margin-left: 15%;
     }
     
     .blob-background svg {
@@ -1910,6 +1911,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
     .blob-background {
         width: 240px;
         height: 240px;
+        margin-left: 15%;
     }
     
     .blob-background svg {

@@ -817,7 +817,7 @@ video {
 
 .tech-category {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 10px;
     padding: 18px;
     margin-bottom: 20px;
@@ -832,8 +832,8 @@ video {
 }
 
 .tech-category:hover {
-    border-color: #00e6cc;
-    box-shadow: 0 0 5px rgba(0, 230, 204, 0.1);
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
 }
 
 .category-title {
@@ -1297,7 +1297,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 
 .certification-card {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 8px;
     padding: 11px;
     backdrop-filter: blur(5px);
@@ -1307,8 +1307,8 @@ button.show-metrics-btn[style*="transparent"]:hover {
 }
 
 .certification-card:hover {
-    border-color: #00e6cc;
-    box-shadow: 0 0 5px rgba(0, 230, 204, 0.1);
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
 }
 
 .certification-icon {
@@ -1993,7 +1993,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 /* Empty Section Styles */
 .empty-section {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 12px;
     padding: 40px 25px;
     backdrop-filter: blur(5px);
@@ -2021,7 +2021,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 
 .project-card {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 12px;
     padding: 25px;
     backdrop-filter: blur(5px);
@@ -2030,8 +2030,8 @@ button.show-metrics-btn[style*="transparent"]:hover {
 }
 
 .project-card:hover {
-    border-color: #00e6cc;
-    box-shadow: 0 0 5px rgba(0, 230, 204, 0.1);
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
     transform: translateY(-2px);
 }
 

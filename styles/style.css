@@ -476,7 +476,6 @@ video {
         width: 280px;
         height: 280px;
         margin-left: 15%;
-        transform: translateY(-10px);
     }
     
     .blob-background svg {
@@ -500,7 +499,6 @@ video {
     .section {
         padding: 40px 20px;
         margin: 30px 0;
-        transform: translateY(-10px);
     }
     
     .section h2 {

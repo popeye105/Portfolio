@@ -12,7 +12,7 @@ const techStack = {
     ],
     'databases': [
         { name: 'MySQL', image: 'TS Logo/MYSQL.png' },
-        { name: 'Mongodb', image: 'TS Logo/MONGODB.png' }
+        { name: 'MongoDB', image: 'TS Logo/MONGODB.png' }
     ],
     'dev-tools': [
         { name: 'Github', image: 'TS Logo/GITHUB.png' },

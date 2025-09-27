@@ -817,7 +817,7 @@ video {
 
 .tech-category {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 10px;
     padding: 18px;
     margin-bottom: 20px;
@@ -832,8 +832,8 @@ video {
 }
 
 .tech-category:hover {
-    border-color: #00e6cc;
-    box-shadow: 0 0 5px rgba(0, 230, 204, 0.1);
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
 }
 
 .category-title {
@@ -1297,7 +1297,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 
 .certification-card {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 8px;
     padding: 11px;
     backdrop-filter: blur(5px);
@@ -1307,8 +1307,8 @@ button.show-metrics-btn[style*="transparent"]:hover {
 }
 
 .certification-card:hover {
-    border-color: #00e6cc;
-    box-shadow: 0 0 5px rgba(0, 230, 204, 0.1);
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
 }
 
 .certification-icon {
@@ -1993,7 +1993,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 /* Empty Section Styles */
 .empty-section {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 12px;
     padding: 40px 25px;
     backdrop-filter: blur(5px);
@@ -2021,7 +2021,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 
 .project-card {
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     border-radius: 12px;
     padding: 25px;
     backdrop-filter: blur(5px);
@@ -2030,8 +2030,8 @@ button.show-metrics-btn[style*="transparent"]:hover {
 }
 
 .project-card:hover {
-    border-color: #00e6cc;
-    box-shadow: 0 0 5px rgba(0, 230, 204, 0.1);
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
     transform: translateY(-2px);
 }
 
@@ -2159,40 +2159,84 @@ button.show-metrics-btn[style*="transparent"]:hover {
 /* Mobile Responsive for Contact Container */
 @media (max-width: 768px) {
     .contact-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
     }
     
     .contact-info-cards {
         order: 2;
+        gap: 20px;
     }
     
     .contact-form-container {
-        padding: 20px;
+        padding: 25px 20px;
         order: 1;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .contact-info-card {
         padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .contact-card-icon {
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
     }
     
     .contact-card-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .contact-card-content {
+        flex: 1;
+    }
+    
+    .contact-card-content h3 {
         font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .contact-card-content p {
+        font-size: 0.9rem;
+        word-break: break-word;
     }
     
     .form-input {
-        padding: 10px 40px 10px 12px;
-        font-size: 0.85rem;
+        padding: 15px 45px 15px 15px;
+        font-size: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .form-button {
-        padding: 12px 25px;
-        font-size: 0.9rem;
+        padding: 15px 30px;
+        font-size: 0.95rem;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .contact-form {
+        gap: 20px;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-description {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        text-align: center;
     }
 }
 
@@ -2228,22 +2272,64 @@ button.show-metrics-btn[style*="transparent"]:hover {
         font-size: 0.75rem;
     }
     
+    .contact-container {
+        padding: 0 10px;
+        gap: 20px;
+    }
+    
     .contact-form-container {
+        padding: 20px 15px;
+    }
+    
+    .contact-info-card {
         padding: 15px;
+        gap: 12px;
+    }
+    
+    .contact-card-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contact-card-icon i {
+        font-size: 1.1rem;
+    }
+    
+    .contact-card-content h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-card-content p {
+        font-size: 0.85rem;
     }
     
     .form-input {
-        padding: 12px 15px 12px 40px;
-        font-size: 0.9rem;
+        padding: 12px 40px 12px 15px;
+        font-size: 0.85rem;
     }
     
     .form-icon {
         left: 12px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .form-button {
-        padding: 10px 20px;
-        font-size: 0.85rem;
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    
+    .contact-form {
+        gap: 18px;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-description {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        padding: 0 10px;
     }
 }

@@ -550,11 +550,13 @@ video {
         margin: 20px 10px;
     }
     
-    .form-input { padding: 12px 45px 12px 40px; font-size: 16px; }
-    .form-icon { left: 15px; }
+    .form-input { padding: 12px 15px 12px 45px; font-size: 16px; }
+    .form-icon { left: 18px; font-size: 0.8rem; }
     .form-group:has(.form-textarea) .form-icon { top: 15px; transform: none; }
     .form-button { width: 100%; max-width: 250px; margin: 15px auto 0; }
     .contact-info-card { padding: 6px 15px 6px 6px; max-width: 240px; height: 50px; }
+    .contact-card-icon { width: 24px; height: 24px; }
+    .contact-card-icon i { font-size: 0.7rem; }
     .contact-container { flex-direction: column; gap: 20px; align-items: center; }
     
     /* Footer */

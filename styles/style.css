@@ -440,8 +440,8 @@ video {
     }
     
     .hero-section {
-        padding: 10px 20px 0 20px;
-        margin-top: -30px;
+        padding: 5px 20px 0 20px;
+        margin-top: -40px;
     }
     
     .hero-text {
@@ -478,8 +478,8 @@ video {
     }
     
     .blob-background {
-        width: 280px;
-        height: 280px;
+        width: 240px;
+        height: 240px;
         margin-left: 15%;
     }
     

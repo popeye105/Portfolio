@@ -554,7 +554,7 @@ video {
     .form-icon { left: 15px; font-size: 0.75rem; }
     .form-group:has(.form-textarea) .form-icon { top: 15px; transform: none; }
     .form-button { width: 100%; max-width: 250px; margin: 15px auto 0; }
-    .contact-info-card { padding: 6px 15px 6px 6px; max-width: 240px; height: 50px; }
+    .contact-info-card { padding: 6px 15px 6px 6px; max-width: 240px; height: 50px; gap: 8px; }
     .contact-card-icon { width: 24px; height: 24px; }
     .contact-card-icon i { font-size: 0.7rem; }
     .contact-container { flex-direction: column; gap: 20px; align-items: center; }
@@ -2286,7 +2286,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
     
     .contact-info-card {
         padding: 15px;
-        gap: 12px;
+        gap: 8px;
     }
     
     .contact-card-icon {

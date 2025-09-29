@@ -435,7 +435,7 @@ video {
     /* Hero Section */
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 5px;
         text-align: center;
     }
     
@@ -478,8 +478,8 @@ video {
     }
     
     .blob-background {
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 220px;
         margin-left: 15%;
     }
     
@@ -1974,8 +1974,8 @@ button.show-metrics-btn[style*="transparent"]:hover {
     }
     
     .blob-background {
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 220px;
         margin-left: 15%;
     }
     

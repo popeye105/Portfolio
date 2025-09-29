@@ -556,7 +556,7 @@ video {
     .form-button { width: 100%; max-width: 250px; margin: 15px auto 0; }
     .contact-info-card { padding: 6px 15px 6px 6px; max-width: 240px; height: 50px; }
     .contact-card-icon { width: 20px; height: 20px; }
-    .contact-card-icon i { font-size: 0.8rem; }
+    .contact-card-icon i { font-size: 0.7rem; }
     .contact-container { flex-direction: column; gap: 20px; align-items: center; }
     
     /* Footer */
@@ -2295,7 +2295,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
     }
     
     .contact-card-icon i {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
     
     .contact-card-content h3 {

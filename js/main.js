@@ -226,11 +226,11 @@ function initMobileNavigation() {
                 setTimeout(() => {
                     let offset = 20; 
                     if (targetId === 'about') {
-                        offset = 0; // About: much higher (right at nav bar)
+                        offset = -20; // About: much higher (above nav bar)
                     } else if (targetId === 'projects' || targetId === 'certifications') {
                         offset = 10; // Projects & Certifications: a bit higher
                     }
-                    console.log(`Mobile nav clicked: ${targetId}, offset: ${offset}`); 
+                    console.log(`MOBILE NAV FIRED: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;
                     window.scrollTo({
                         top: offsetTop,

@@ -1636,8 +1636,8 @@ button.show-metrics-btn[style*="transparent"]:hover {
     }
 
     .section {
-        padding: 30px var(--mobile-padding);
-        margin: 45px 0;
+        padding: 5px var(--mobile-padding);
+        margin: 0;
     }
     
     .section:first-of-type {
@@ -1646,7 +1646,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
     
     h2 {
         font-size: 2.5rem;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         text-align: center;
         font-weight: 700;
         letter-spacing: 3px;
@@ -1740,18 +1740,6 @@ button.show-metrics-btn[style*="transparent"]:hover {
         margin: 10px 0;
     }
 }
-
-    .section {
-        padding: 20px 15px;
-        margin: 15px 0;
-    }
-    
-    h2 {
-        font-size: 2.3rem;
-        margin-bottom: 20px;
-        font-weight: 700;
-        letter-spacing: 3px;
-    }
 
 @media (max-width: 768px) {
     .tech-categories-container {

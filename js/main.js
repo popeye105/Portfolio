@@ -228,7 +228,7 @@ function initMobileNavigation() {
                     if (targetId === 'about') {
                         offset = -50; 
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = -20; 
+                        offset = -10; 
                     }
                     console.log(`MOBILE NAV FIRED: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;

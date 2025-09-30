@@ -500,7 +500,7 @@ video {
         display: none;
     }
     
-    /* Sections - Mobile Only */
+    /* Sections - Mobile Only - Original spacing restored */
     .section {
         padding: 60px 20px;
         margin: 40px 0;
@@ -509,11 +509,6 @@ video {
     .section h2 {
         font-size: 1.8rem;
         margin-bottom: 40px;
-    }
-    
-    /* Normalize anchor positioning for consistent mobile spacing */
-    #about, #skills, #projects, #certifications, #education, #contact {
-        top: 0 !important;
     }
     
     /* About Section */
@@ -1645,11 +1640,6 @@ button.show-metrics-btn[style*="transparent"]:hover {
         text-align: center;
         font-weight: 700;
         letter-spacing: 3px;
-    }
-    
-    /* Normalize anchor positioning for consistent mobile spacing */
-    #about, #skills, #projects, #certifications, #education, #contact {
-        top: 0 !important;
     }
 
     .about-content {

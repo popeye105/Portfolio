@@ -224,18 +224,19 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    let offset = 30; // default for most sections
+                    let offset = 80; // default - much higher to test
                     if (targetId === 'about') {
-                        offset = 5; // About: much higher
+                        offset = 0; // About: right at nav bar
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = 20; // Projects & Certifications: closer like others
+                        offset = 40; // Projects & Certifications: middle
                     }
+                    console.log(`Mobile nav clicked: ${targetId}, offset: ${offset}`); // Debug
                     const offsetTop = targetSection.offsetTop - offset;
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
                     });
-                }, 300); // Wait for mobile menu to close
+                }, 300); 
             }
         });
     });

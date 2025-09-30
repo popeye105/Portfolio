@@ -141,8 +141,17 @@ function initSmoothScrolling() {
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
-                // Use same offset for both navigation and hero contact button
-                const offset = 80;
+                // Different offsets for different sections on desktop
+                let offset = 50; // default offset
+                
+                if (targetId === 'about') {
+                    offset = 10; // About section: much closer to nav bar
+                } else if (targetId === 'skills') {
+                    offset = 45; // Tech Stack: a bit closer to nav bar
+                } else if (targetId === 'projects' || targetId === 'certifications' || targetId === 'education' || targetId === 'contact') {
+                    offset = 25; // Make these a bit closer too (compensate for their larger base margins)
+                }
+                
                 const offsetTop = targetSection.offsetTop - offset;
                 window.scrollTo({
                     top: offsetTop,

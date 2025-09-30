@@ -142,7 +142,7 @@ function initSmoothScrolling() {
             
             if (targetSection) {
                 // Use same offset for both navigation and hero contact button
-                const offset = 70;
+                const offset = 80;
                 const offsetTop = targetSection.offsetTop - offset;
                 window.scrollTo({
                     top: offsetTop,

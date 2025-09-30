@@ -502,7 +502,7 @@ video {
     
     /* Sections - Mobile Only */
     .section {
-        padding: 5px 20px;
+        padding: 20px 20px 5px 20px;
         margin: 0 !important;
     }
     
@@ -1646,7 +1646,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
     }
 
     .section {
-        padding: 5px var(--mobile-padding);
+        padding: 20px var(--mobile-padding) 5px var(--mobile-padding);
         margin: 0 !important;
     }
     

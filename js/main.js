@@ -224,7 +224,8 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    const offsetTop = targetSection.offsetTop - 30;
+                    const offset = targetId === 'about' ? 10 : 30;
+                    const offsetTop = targetSection.offsetTop - offset;
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'

@@ -222,11 +222,11 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    let offset = 10; // default - a bit higher for all sections
+                    let offset = 10; 
                     if (targetId === 'about') {
-                        offset = -50; // About: much much higher (unchanged)
+                        offset = -50; 
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = 5; // Projects & Certifications: a bit higher
+                        offset = 0; 
                     }
                     console.log(`MOBILE NAV FIRED: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;

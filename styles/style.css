@@ -502,19 +502,13 @@ video {
     
     /* Sections - Mobile Only */
     .section {
-        padding: 20px 20px 5px 20px;
-        margin: 0 !important;
-    }
-    
-    /* Override desktop section margins for mobile consistency */
-    .section:not(#about-section) {
-        margin: 0 !important;
+        padding: 60px 20px;
+        margin: 40px 0;
     }
     
     .section h2 {
         font-size: 1.8rem;
-        margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 40px;
     }
     
     /* Normalize anchor positioning for consistent mobile spacing */
@@ -1641,22 +1635,13 @@ button.show-metrics-btn[style*="transparent"]:hover {
     }
 
     .section {
-        padding: 20px var(--mobile-padding) 5px var(--mobile-padding);
-        margin: 0 !important;
-    }
-    
-    /* Override desktop section margins for mobile consistency */
-    .section:not(#about-section) {
-        margin: 0 !important;
-    }
-    
-    .section:first-of-type {
-        margin-top: 0 !important;
+        padding: 60px var(--mobile-padding);
+        margin: 40px 0;
     }
     
     h2 {
         font-size: 2.5rem;
-        margin-bottom: 15px;
+        margin-bottom: 40px;
         text-align: center;
         font-weight: 700;
         letter-spacing: 3px;

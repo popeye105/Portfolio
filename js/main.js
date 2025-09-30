@@ -199,7 +199,7 @@ function initSmoothScrolling() {
         scrollTimeout = setTimeout(updateActiveNavigation, 10);
     });
     
-    // Initial call to set active navigation
+ 
     updateActiveNavigation();
 }
 
@@ -222,11 +222,11 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    let offset = 20; 
+                    let offset = 10; // default - a bit higher for all sections
                     if (targetId === 'about') {
-                        offset = -50;
+                        offset = -50; // About: much much higher (unchanged)
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = 10; 
+                        offset = 5; // Projects & Certifications: a bit higher
                     }
                     console.log(`MOBILE NAV FIRED: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;

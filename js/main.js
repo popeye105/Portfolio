@@ -224,13 +224,13 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    let offset = 80; // default - much higher to test
+                    let offset = 20; // default - closer to nav bar
                     if (targetId === 'about') {
-                        offset = 0; // About: right at nav bar
+                        offset = 5; // About: very close to nav bar
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = 40; // Projects & Certifications: middle
+                        offset = 15; // Projects & Certifications: close
                     }
-                    console.log(`Mobile nav clicked: ${targetId}, offset: ${offset}`); // Debug
+                    console.log(`Mobile nav clicked: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;
                     window.scrollTo({
                         top: offsetTop,

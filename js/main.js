@@ -137,13 +137,15 @@ function initSmoothScrolling() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
+            const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
-               
+                // Different offsets for different sections on desktop
                 let offset = 50; // default offset
+                
                 if (targetId === 'about') {
-                    offset = -50; // About: much much higher (way above nav bar)
+                    offset = 10; // About section: much closer to nav bar
                 } else if (targetId === 'skills') {
                     offset = 45; // Tech Stack: a bit closer to nav bar
                 } else if (targetId === 'projects' || targetId === 'certifications' || targetId === 'education' || targetId === 'contact') {
@@ -226,7 +228,7 @@ function initMobileNavigation() {
                     if (targetId === 'about') {
                         offset = -50; 
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = 0; 
+                        offset = -20; 
                     }
                     console.log(`MOBILE NAV FIRED: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;

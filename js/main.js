@@ -224,7 +224,12 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    const offset = targetId === 'about' ? 10 : 30;
+                    let offset = 30; // default for most sections
+                    if (targetId === 'about') {
+                        offset = 5; // About: much higher
+                    } else if (targetId === 'projects' || targetId === 'certifications') {
+                        offset = 20; // Projects & Certifications: closer like others
+                    }
                     const offsetTop = targetSection.offsetTop - offset;
                     window.scrollTo({
                         top: offsetTop,

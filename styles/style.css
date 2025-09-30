@@ -503,13 +503,23 @@ video {
     /* Sections - Mobile Only */
     .section {
         padding: 5px 20px;
-        margin: 0;
+        margin: 0 !important;
+    }
+    
+    /* Override desktop section margins for mobile consistency */
+    .section:not(#about-section) {
+        margin: 0 !important;
     }
     
     .section h2 {
         font-size: 1.8rem;
         margin-top: 0;
         margin-bottom: 15px;
+    }
+    
+    /* Normalize anchor positioning for consistent mobile spacing */
+    #about, #skills, #projects, #certifications, #education, #contact {
+        top: 0 !important;
     }
     
     /* About Section */
@@ -1637,11 +1647,16 @@ button.show-metrics-btn[style*="transparent"]:hover {
 
     .section {
         padding: 5px var(--mobile-padding);
-        margin: 0;
+        margin: 0 !important;
+    }
+    
+    /* Override desktop section margins for mobile consistency */
+    .section:not(#about-section) {
+        margin: 0 !important;
     }
     
     .section:first-of-type {
-        margin-top: 5px;
+        margin-top: 0 !important;
     }
     
     h2 {
@@ -1650,6 +1665,11 @@ button.show-metrics-btn[style*="transparent"]:hover {
         text-align: center;
         font-weight: 700;
         letter-spacing: 3px;
+    }
+    
+    /* Normalize anchor positioning for consistent mobile spacing */
+    #about, #skills, #projects, #certifications, #education, #contact {
+        top: 0 !important;
     }
 
     .about-content {

@@ -215,7 +215,7 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    const offsetTop = targetSection.offsetTop - 60;
+                    const offsetTop = targetSection.offsetTop - 50;
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'

@@ -224,11 +224,11 @@ function initMobileNavigation() {
             if (targetSection) {
                 closeMobileMenu();
                 setTimeout(() => {
-                    let offset = 20; // default - closer to nav bar
+                    let offset = 20; 
                     if (targetId === 'about') {
-                        offset = 5; // About: very close to nav bar
+                        offset = 0; // About: much higher (right at nav bar)
                     } else if (targetId === 'projects' || targetId === 'certifications') {
-                        offset = 15; // Projects & Certifications: close
+                        offset = 10; // Projects & Certifications: a bit higher
                     }
                     console.log(`Mobile nav clicked: ${targetId}, offset: ${offset}`); 
                     const offsetTop = targetSection.offsetTop - offset;

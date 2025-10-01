@@ -177,6 +177,8 @@ function initSmoothScrolling() {
                     activeSection = 'skills';
                 } else if (section.id === 'about-section') {
                     activeSection = 'about';
+                } else if (section.id === 'blog-section') {
+                    activeSection = 'blog';
                 } else {
                     activeSection = section.id;
                 }

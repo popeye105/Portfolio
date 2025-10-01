@@ -612,8 +612,8 @@ video {
 
 .about-content {
     display: grid;
-    grid-template-columns: 500px 1fr;
-    gap: 20px;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
     align-items: center;
 }
 
@@ -758,13 +758,13 @@ video {
 
 .profile-image {
     width: 100%;
-    max-width: 380px;
-    height: 360px;
+    max-width: 320px;
+    height: 320px;
     overflow: hidden;
     border-radius: 25px;
     padding: 16px;
     position: relative;
-    margin-left: 150px;
+    margin-left: 25px;
     display: flex;
     align-items: center;
 }
@@ -781,22 +781,22 @@ video {
     color: #ffffff;
     font-weight: 600;
     text-align: left;
-    margin-left: -20px;
-    margin-top: -10px;
+    margin-left: -40px;
+    margin-top: -15px;
 }
 
 .bio-description {
-    margin-top: 25px;
+    margin-top: 18px;
     text-align: left;
-    margin-left: 0px;
-    margin-right: 200px;
+    margin-left: -40px;
+    margin-right: 60px;
     clear: both;
     transform: translateY(0px);
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #d1d5db;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 
@@ -2320,5 +2320,156 @@ button.show-metrics-btn[style*="transparent"]:hover {
         font-size: 0.9rem;
         margin-bottom: 25px;
         padding: 0 10px;
+    }
+}
+
+/* Blog Section Styles */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.blog-card {
+    background: rgba(45, 45, 45, 0.8);
+    border: 0.1px solid #333;
+    border-radius: 10px;
+    padding: 25px 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    border-color: #00e6cc !important;
+    box-shadow: none !important;
+}
+
+.blog-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.blog-image {
+    width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.blog-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image {
+    transform: scale(1.05);
+}
+
+.blog-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+}
+
+.blog-card .blog-content .blog-excerpt {
+    font-size: 0.85rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.blog-read-btn {
+    display: inline-block;
+    background: #00e6cc;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.blog-read-btn:hover {
+    background: #e8e8e8;
+    transform: translateY(-1px);
+}
+
+.blog-read-btn.disabled {
+    background: transparent;
+    color: #00e6cc;
+    cursor: not-allowed;
+    border: 1px solid #00e6cc;
+}
+
+.blog-read-btn.disabled:hover {
+    background: transparent;
+    transform: none;
+}
+
+/* Mobile Responsive for Blog */
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    
+    .blog-card {
+        padding: 20px 15px;
+        min-height: 250px;
+    }
+    
+    .blog-title {
+        font-size: 1rem;
+        margin: 0 !important;
+    }
+    
+    .blog-content {
+        gap: 3px !important;
+    }
+    
+    .blog-image {
+        height: 60px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .blog-card .blog-content .blog-excerpt {
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .blog-read-btn {
+        padding: 6px 12px;
+        font-size: 0.7rem;
     }
 }

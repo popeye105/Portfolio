@@ -2337,10 +2337,10 @@ button.show-metrics-btn[style*="transparent"]:hover {
 .blog-card {
     background: rgba(45, 45, 45, 0.8);
     border: none;
+    box-shadow: inset 0 0 0 0.3px #333;
     border-radius: 10px;
     padding: 25px 20px;
     backdrop-filter: blur(5px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -2350,8 +2350,7 @@ button.show-metrics-btn[style*="transparent"]:hover {
 }
 
 .blog-card:hover {
-    border-color: #00e6cc !important;
-    box-shadow: none !important;
+    box-shadow: inset 0 0 0 0.3px #00e6cc !important;
 }
 
 .blog-content {

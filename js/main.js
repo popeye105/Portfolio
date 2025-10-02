@@ -113,7 +113,7 @@ function toggleMetrics(metricsId) {
 function viewCertificate(certificateId) {
     // Certificate PDF file paths
     const certificateUrls = {
-        'ibm-ai': 'Certificates/IBM Foundational AI.pdf',
+        'ibm-ai': 'Certificates/IBM AIF.pdf',
         'ibm-cloud': 'Certificates/IBM Cloud Computing.pdf',
         'nvidia-nlp': 'Certificates/Nvidia Transformer-based NLP.pdf',
         'tata-analytics': 'Certificates/Tata GenAI.pdf'

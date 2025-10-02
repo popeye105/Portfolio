@@ -613,14 +613,16 @@ video {
 .about-content {
     display: grid;
     grid-template-columns: 400px 1fr;
-    gap: 40px;
+    gap: 5px;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .profile-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .about-heading {
@@ -759,12 +761,12 @@ video {
 .profile-image {
     width: 100%;
     max-width: 320px;
-    height: 320px;
+    height: 380px;
     overflow: hidden;
     border-radius: 25px;
     padding: 16px;
     position: relative;
-    margin-left: 25px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
@@ -781,15 +783,15 @@ video {
     color: #ffffff;
     font-weight: 600;
     text-align: left;
-    margin-left: -40px;
+    margin-left: 0;
     margin-top: -15px;
 }
 
 .bio-description {
     margin-top: 18px;
     text-align: left;
-    margin-left: -40px;
-    margin-right: 60px;
+    margin-left: 0;
+    margin-right: 0;
     clear: both;
     transform: translateY(0px);
     font-size: 1rem;
@@ -1292,6 +1294,13 @@ button.show-metrics-btn[style*="transparent"]:hover {
     gap: 15px;
     margin: 0 auto;
     max-width: 800px;
+}
+
+.certifications-bottom-row {
+    max-width: 800px;
+    grid-template-columns: repeat(2, 240px);
+    margin-top: 15px;
+    justify-content: center;
 }
 
 .certification-card {

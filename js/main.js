@@ -114,6 +114,7 @@ function viewCertificate(certificateId) {
     // Certificate PDF file paths
     const certificateUrls = {
         'ibm-ai': 'Certificates/IBM Foundational AI.pdf',
+        'ibm-cloud': 'Certificates/IBM Cloud Computing.pdf',
         'nvidia-nlp': 'Certificates/Nvidia Transformer-based NLP.pdf',
         'tata-analytics': 'Certificates/Tata GenAI.pdf'
     };

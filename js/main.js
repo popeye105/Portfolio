@@ -4,11 +4,16 @@ const techStack = {
     'programming-languages': [
         { name: 'Python', image: 'TS Logo/PYTHON.png' },
         { name: 'Java', image: 'TS Logo/JAVA.png' },
-        { name: 'Javascript', image: 'TS Logo/JAVASCRIPT.png' }
+        { name: 'Javascript', image: 'TS Logo/JAVASCRIPT.png' },
+        { name: 'Typescript', image: 'TS Logo/TYPESCRIPT.png'},
+        { name: 'Bash', image: 'TS Logo/BASH.png' }
     ],
     'web-technologies': [
         { name: 'HTML5', image: 'TS Logo/HTML5.png' },
-        { name: 'CSS3', image: 'TS Logo/CSS3.png' }
+        { name: 'CSS3', image: 'TS Logo/CSS3.png' },
+        { name: 'React.js', image: 'TS Logo/REACT.png' },
+        { name: 'Node.js', image: 'TS Logo/NODEJS.png' },
+        { name: 'Express.js', image: 'TS Logo/EXPRESSJS.png' }
     ],
     'databases': [
         { name: 'MySQL', image: 'TS Logo/MYSQL.png' },

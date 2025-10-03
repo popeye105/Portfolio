@@ -140,17 +140,18 @@ function initSmoothScrolling() {
             
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
+            const isHeroBtn = this.classList.contains('hero-contact-btn');
             
             if (targetSection) {
-                // Different offsets for different sections on desktop
-                let offset = 50; // default offset
+                // Use original offsets for hero button, reduced for nav links
+                let offset = isHeroBtn ? 50 : 35;
                 
                 if (targetId === 'about') {
-                    offset = 10; // About section: much closer to nav bar
+                    offset = isHeroBtn ? 10 : -5;
                 } else if (targetId === 'skills') {
-                    offset = 45; // Tech Stack: a bit closer to nav bar
+                    offset = isHeroBtn ? 45 : 30;
                 } else if (targetId === 'projects' || targetId === 'certifications' || targetId === 'education' || targetId === 'contact') {
-                    offset = 25; // Make these a bit closer too (compensate for their larger base margins)
+                    offset = isHeroBtn ? 25 : 10;
                 }
                 
                 const offsetTop = targetSection.offsetTop - offset;
